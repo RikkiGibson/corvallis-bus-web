@@ -1,0 +1,31 @@
+{
+  "name": "corvallis-bus-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RikkiGibson/corvallis-bus-web.git"
+  },
+  "author": "",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/RikkiGibson/corvallis-bus-web/issues"
+  },
+  "homepage": "https://github.com/RikkiGibson/corvallis-bus-web#readme",
+  "devDependencies": {
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.0.1",
+    "babel-preset-react": "^6.1.2",
+    "file-loader": "^0.8.4",
+    "webpack": "^1.12.3"
+  },
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  }
+}
