@@ -6,6 +6,7 @@ BUILD_PATH = path.join(__dirname, 'build');
 module.exports = {
   context: APP_PATH,
   entry: {
+    sass: './styles.scss',
     javascript: './index.js',
     html: './index.html'
   },
@@ -22,6 +23,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "file?name=[name].[ext]",
+      },
+      {
+        test: /\.scss$/,
+        loader: "style!css!sass!"
       }
     ]
   }

@@ -23,7 +23,7 @@ function makeRequest(method, url) {
 }
 
 function getFavoriteStops(stopIDs, latLng) {
-	var url = "http://rikkib.us/favorites?stops=" + stopIds.join(',')
+	var url = "http://rikkib.us/favorites?stops=" + stopIDs.join(',')
 		+ "&location=" + latLng.lat + "," + latLng.lng;
 	return makeRequest("GET", url);
 }
