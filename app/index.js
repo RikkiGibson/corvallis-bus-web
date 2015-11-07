@@ -1,16 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-const API_PATH = "http://rikkib.us/favorites?stops=11776,10308&location=44.5645659,-123.2620435";
-
 var HelloWorld = require('./HelloWorld');
 
-
-ReactDOM.render(<HelloWorld api={API_PATH}/>,
-	document.getElementById('example')
+var favs = [11776,10308];
+var loc = {lat: 44.5645659, lng: -123.2620435};
+ReactDOM.render(<HelloWorld favoriteStops={favs} location={loc}/>,
+	document.getElementById('root')
 );
-
-ReactDOM.render(<h1>{"I'm cool!"}</h1>,
-	document.getElementById('foo')
-);
-
