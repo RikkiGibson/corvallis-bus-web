@@ -26,12 +26,13 @@ html {
     .route-name {
     	color: white;
     	padding: 1px;
+    	margin-right: 4px;
     	width: 50px;
     	text-align: center;
     	display: inline-block;
     	border-radius: 6px;
     }
-    
+
     .favorite-route {
     	margin-top: 2px;
     	margin-bottom: 2px;
@@ -54,5 +55,12 @@ html {
 
     .favorite-row:hover {
     	background-color: whitesmoke;
+    }
+
+    .location-arrow {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: 8px;
     }
 }

@@ -38,7 +38,7 @@ export default class FavoritesTable extends React.Component {
 			var clickHandler = () => {
 				alert("You clicked me: " + row.StopId);
 			}
-			return <FavoritesRow {...row} onClick={clickHandler}/>
+			return <FavoritesRow key={row.StopId} {...row} onClick={clickHandler}/>
 		});
 
 		return (
