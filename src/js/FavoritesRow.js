@@ -6,11 +6,23 @@ export default class FavoritesRow extends React.Component {
 	}
 
 	render() {
-		return <tr>
+		var firstRouteStyle = {
+			backgroundColor: (this.props.FirstRouteName.length > 0) ? "#" + this.props.FirstRouteColor : "gray"
+		};
+		var secondRouteStyle = {
+			backgroundColor: (this.props.SecondRouteName.length > 0) ? "#" + this.props.SecondRouteColor : ""
+		};
+
+		return <tr className="favorite-row" onClick={this.props.onClick}>
 			<td>
 				{this.props.StopName}<br />
-				{this.props.FirstRouteName} {this.props.FirstRouteArrivals}<br />
-				{this.props.SecondRouteName} {this.props.SecondRouteArrivals} {this.props.DistanceFromUser}
+				<div className="favorite-route">
+					<span className="route-name" style={firstRouteStyle}>{this.props.FirstRouteName}</span> {this.props.FirstRouteArrivals}
+				</div>
+
+				<div className="favorite-route">
+				<span className="route-name" style={secondRouteStyle}>{this.props.SecondRouteName}</span> {this.props.SecondRouteArrivals} <span className="distance">{this.props.DistanceFromUser}</span>
+				</div>
 			</td>
 		</tr>
 	}

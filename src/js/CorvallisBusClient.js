@@ -23,7 +23,9 @@ function makeRequest(method, url) {
 }
 
 function getFavoriteStops(stopIDs, latLng) {
-	var url = "http://rikkib.us/favorites?stops=" + stopIDs.join(',')
-		+ "&location=" + latLng.lat + "," + latLng.lng;
+	var url = "http://rikkib.us/favorites?stops=" + stopIDs.join(',') + "&location=";
+	if (latLng) {
+		url += latLng.lat + "," + latLng.lng;
+	}
 	return makeRequest("GET", url);
 }
