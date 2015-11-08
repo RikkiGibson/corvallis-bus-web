@@ -13,11 +13,13 @@ export default class FavoritesRow extends React.Component {
 			backgroundColor: (this.props.SecondRouteName.length > 0) ? "#" + this.props.SecondRouteColor : ""
 		};
 
+		var firstRouteName = this.props.FirstRouteName.length > 0 ? this.props.FirstRouteName : "N/A";
+
 		return <tr className="favorite-row" onClick={this.props.onClick}>
 			<td>
 				{this.props.StopName}<br />
 				<div className="favorite-route">
-					<span className="route-name" style={firstRouteStyle}>{this.props.FirstRouteName}</span> {this.props.FirstRouteArrivals}
+					<span className="route-name" style={firstRouteStyle}>{firstRouteName}</span> {this.props.FirstRouteArrivals}
 				</div>
 
 				<div className="favorite-route">
