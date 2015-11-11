@@ -1,6 +1,7 @@
 import React from 'react';
 import CorvallisBusClient from './CorvallisBusClient';
 import FavoritesRow from './FavoritesRow';
+import spinner from '../img/loading.gif'
 
 export default class FavoritesTable extends React.Component {
 	constructor(props) {
@@ -12,7 +13,7 @@ export default class FavoritesTable extends React.Component {
 
 	update() {
 		CorvallisBusClient
-			.getFavoriteStops(this.props.favoriteStops, this.props.location)
+			.getFavoriteStops()
 			.then(favorites => {
 				this.setState({
 					favoriteStops: JSON.parse(favorites)
@@ -21,6 +22,7 @@ export default class FavoritesTable extends React.Component {
 				console.log(err);
 			});
 	}
+
 
 	componentDidMount() {
 		this.update();
@@ -42,10 +44,8 @@ export default class FavoritesTable extends React.Component {
 		});
 
 		return (
+			// todo: figure out why the new react won't let me put a header on the table
 			<table className="table-favorites">
-				<thead>
-					<th>Favorites</th>
-				</thead>
 				<tbody className="favorites-body">
 				{rows}
 				</tbody>

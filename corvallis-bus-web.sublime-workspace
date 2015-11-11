@@ -1,0 +1,1266 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"firs",
+				"firstRouteName"
+			],
+			[
+				"fir",
+				"FirstRouteName"
+			],
+			[
+				"lca",
+				"localStorage"
+			],
+			[
+				"Second",
+				"SecondRouteName"
+			],
+			[
+				"secon",
+				"secondRouteStyle"
+			],
+			[
+				"first",
+				"firstRouteStyle"
+			],
+			[
+				"seconr",
+				"SecondRouteColor"
+			],
+			[
+				"E",
+				"EICRA"
+			],
+			[
+				"lower",
+				"lower_bound"
+			],
+			[
+				"compu",
+				"computes_running"
+			],
+			[
+				"com",
+				"computes_running"
+			],
+			[
+				"compute",
+				"compute_socket"
+			],
+			[
+				"exit",
+				"EXIT_FAILURE"
+			],
+			[
+				"threae",
+				"thread_cleanup"
+			],
+			[
+				"decode",
+				"decode_perfects"
+			],
+			[
+				"cl",
+				"compute_clients"
+			],
+			[
+				"server_",
+				"server_sock"
+			],
+			[
+				"decode_",
+				"decode_performance"
+			],
+			[
+				"upper",
+				"upper_bound"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"enco",
+				"encode_perfects"
+			],
+			[
+				"per",
+				"perfects_len"
+			],
+			[
+				"listen",
+				"listen_thread"
+			],
+			[
+				"perfe",
+				"perfects_len"
+			],
+			[
+				"PERFE",
+				"PERFECT_NUMBERS_LEN"
+			],
+			[
+				"recv",
+				"recv_buf"
+			],
+			[
+				"match",
+				"match_str"
+			],
+			[
+				"matches",
+				"matches_len"
+			],
+			[
+				"pc",
+				"pcre_error_offset"
+			],
+			[
+				"pcre_er",
+				"pcre_error_str"
+			],
+			[
+				"rec",
+				"recv_buf"
+			],
+			[
+				"send",
+				"send_buf"
+			],
+			[
+				"sock",
+				"sockaddr_in"
+			],
+			[
+				"PER",
+				"PERFECT_NUMBERS"
+			],
+			[
+				"MAX",
+				"MAX_CHILDREN"
+			],
+			[
+				"bitmap",
+				"bitmap_size"
+			],
+			[
+				"multi",
+				"multiproc_time"
+			],
+			[
+				"mu",
+				"multiproc_time"
+			],
+			[
+				"th",
+				"threaded_time"
+			],
+			[
+				"mul",
+				"multiproc_times"
+			],
+			[
+				"thre",
+				"threaded_times"
+			],
+			[
+				"con",
+				"concurrent_numbers"
+			],
+			[
+				"happy",
+				"happy_threaded"
+			],
+			[
+				"output",
+				"output_filename"
+			],
+			[
+				"use",
+				"use_output_file"
+			],
+			[
+				"outp",
+				"output_filename"
+			],
+			[
+				"spaw",
+				"spawn_threads"
+			],
+			[
+				"read",
+				"read_primes_from_file"
+			],
+			[
+				"out",
+				"output_filename"
+			],
+			[
+				"filenam",
+				"input_filename"
+			],
+			[
+				"find",
+				"find_happy_numbers"
+			],
+			[
+				"write",
+				"write_data"
+			],
+			[
+				"pthread_mut",
+				"pthread_mutex_unlock"
+			],
+			[
+				"global",
+				"global_happy"
+			],
+			[
+				"mut",
+				"happy_mutex"
+			],
+			[
+				"bytes",
+				"bytes_ptr"
+			],
+			[
+				"hapy",
+				"happy_threaded"
+			],
+			[
+				"num",
+				"num_threads"
+			],
+			[
+				"nu",
+				"num_threads"
+			],
+			[
+				"primes",
+				"primes_ptr"
+			],
+			[
+				"prime",
+				"primes_ptr"
+			],
+			[
+				"happ",
+				"happy_idx"
+			],
+			[
+				"hap",
+				"is_happy"
+			],
+			[
+				"nube",
+				"number_of_bytes"
+			],
+			[
+				"REDIR_",
+				"REDIR_IN"
+			],
+			[
+				"null",
+				"NULL"
+			],
+			[
+				"sh_",
+				"sh_cmds"
+			],
+			[
+				"filen",
+				"sh_filename"
+			],
+			[
+				"redir",
+				"REDIR_TRUNC"
+			],
+			[
+				"is",
+				"is_trans"
+			],
+			[
+				"sh",
+				"sh_args"
+			],
+			[
+				"RED",
+				"REDIR_TRUNC"
+			],
+			[
+				"file",
+				"sh_filename"
+			],
+			[
+				"filne",
+				"sh_filename"
+			],
+			[
+				"REDIR",
+				"REDIR_APPEND"
+			],
+			[
+				"old_t",
+				"old_table_len"
+			],
+			[
+				"even",
+				"inotify_event"
+			],
+			[
+				"inotif",
+				"inotify_event"
+			],
+			[
+				"inot",
+				"inotify_event"
+			],
+			[
+				"error",
+				"exit_error"
+			],
+			[
+				"EXIT",
+				"EXIT_FAILURE"
+			],
+			[
+				"write_",
+				"write_filename_header"
+			],
+			[
+				"erro",
+				"exit_error"
+			],
+			[
+				"open_for_",
+				"open_for_file_lookup"
+			],
+			[
+				"fil",
+				"filename_fd"
+			],
+			[
+				"byte",
+				"bytes_read"
+			],
+			[
+				"old_",
+				"old_table_len"
+			],
+			[
+				"table",
+				"write_long_filename_table"
+			],
+			[
+				"red",
+				"read_header_from_archive"
+			],
+			[
+				"filena",
+				"filenames"
+			],
+			[
+				"fh",
+				"FHEADERLEN"
+			],
+			[
+				"FSIZE",
+				"FSIZE_OFF"
+			],
+			[
+				"get_",
+				"get_files_in_directory"
+			],
+			[
+				"bu",
+				"BUF_SIZE"
+			],
+			[
+				"get_fil",
+				"get_archive_filename"
+			],
+			[
+				"rem",
+				"remaining_bytes"
+			],
+			[
+				"get_filesn",
+				"get_filenames"
+			],
+			[
+				"get_file",
+				"get_filesystem_name"
+			],
+			[
+				"skip",
+				"skip_file_body"
+			],
+			[
+				"arr",
+				"arr_contains_string"
+			],
+			[
+				"head_",
+				"read_header_from_archive"
+			],
+			[
+				"FMA",
+				"FMAG_LEN"
+			],
+			[
+				"FSIZ",
+				"FSIZE_OFF"
+			],
+			[
+				"FMODE_",
+				"FMODE_OFF"
+			],
+			[
+				"FGID",
+				"FGID_OFF"
+			],
+			[
+				"FUID",
+				"FUID_OFF"
+			],
+			[
+				"header",
+				"header_string"
+			],
+			[
+				"ar",
+				"ar_date"
+			],
+			[
+				"FG",
+				"FGID_LEN"
+			],
+			[
+				"FUI",
+				"FUID_LEN"
+			],
+			[
+				"FDATE",
+				"FDATE_LEN"
+			],
+			[
+				"ar_",
+				"ar_name"
+			],
+			[
+				"FMO",
+				"FMODE_LEN"
+			],
+			[
+				"newli",
+				"newline_pos"
+			],
+			[
+				"get",
+				"get_header"
+			],
+			[
+				"open_for",
+				"open_for_read"
+			],
+			[
+				"great",
+				"greatest_factors"
+			],
+			[
+				"greatest",
+				"greatest_factors"
+			],
+			[
+				"greates",
+				"greatest_factors"
+			],
+			[
+				"name_",
+				"get_name_score_sum"
+			],
+			[
+				"big",
+				"big_number_list"
+			],
+			[
+				"directory",
+				"directory_list"
+			],
+			[
+				"pritn",
+				"printNode"
+			],
+			[
+				"l",
+				"LinkedListNode"
+			],
+			[
+				"balla",
+				"balllabel2"
+			],
+			[
+				"car",
+				"carSimulation"
+			],
+			[
+				"planet",
+				"planetVelocities"
+			],
+			[
+				"se",
+				"stylesheet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 159.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"linter settings",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"remove packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"enable linter",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"sublimegdb",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"install page",
+				"Package Control: Install Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings - Default"
+			],
+			[
+				"gdb settings",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"sublimelinter settings",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"disabl",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"remove pak",
+				"Package Control: Remove Package"
+			],
+			[
+				"debug",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"package ",
+				"Package Control: Remove Package"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"disable linter",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"Project: Edit Project"
+			],
+			[
+				"packag",
+				"Package Control: Disable Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"package remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"disable p",
+				"Package Control: Disable Package"
+			],
+			[
+				"print",
+				"Print to HTML: print as HTML via browser"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"print to",
+				"Print to HTML: print as HTML to new buffer"
+			],
+			[
+				"exp",
+				"Export to HTML: Show Export Menu"
+			],
+			[
+				"expor",
+				"Export to HTML: Show Export Menu"
+			],
+			[
+				"export",
+				"Export to HTML: Toggle Annotation Mode"
+			],
+			[
+				"repl: no",
+				"SublimeREPL: Node"
+			],
+			[
+				"",
+				"Bookmarks: Select Next"
+			],
+			[
+				"package control",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 229.0,
+		"history":
+		[
+			"os.getenv('PATH')",
+			"import os",
+			"os.getenv('PATH')",
+			"os.getenv",
+			"os.getenv['PATH']",
+			"import os",
+			"os.environ['PATH']",
+			"import os",
+			"os.environ['PATH']",
+			"foo + 2",
+			"foo = 3",
+			"what is this",
+			"gdb",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/rikkigibson/Documents/corvallis-bus-web"
+	],
+	"file_history":
+	[
+		"/Users/rikkigibson/Documents/OSU/ECE375/homework3.tex",
+		"/Users/rikkigibson/ECE375/Lab5/Lab5/main.asm",
+		"/Users/rikkigibson/demo-webpack-react-app/src/css/master.scss",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/css/master.scss",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/entry.js",
+		"/Users/rikkigibson/.bash_profile",
+		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj5_gibsonri/writeup.tex",
+		"/Users/rikkigibson/Xcode/CorvallisBus/LICENSE",
+		"/Users/rikkigibson/Documents/OSU/ECE375/lab 3/LCDDriver.asm",
+		"/Users/rikkigibson/Documents/OSU/ECE375/lab 3/LCDTest.asm",
+		"/Users/rikkigibson/Documents/OSU/ECE375/BasicBumpBot.asm",
+		"/Users/rikkigibson/ECE375/Lab4/Lab4/main.asm",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/User/AVR-ASM-Sublime/avr-asm.tmLanguage",
+		"/Users/rikkigibson/simavr/simavr/Makefile.common",
+		"/Users/rikkigibson/simavr/simavr/simavr/sim/sim_elf.c",
+		"/Users/rikkigibson/simavr/simavr/simavr/Makefile",
+		"/Users/rikkigibson/bitbucket site/blog-promises/blog-promises.html",
+		"/Users/rikkigibson/Documents/OSU/ECE375/lab 3/lab3.asm",
+		"/Users/rikkigibson/simavr/simavr/simavr/simavr.pc",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj1_gibsonri/sieve.c",
+		"/Users/rikkigibson/AVR-ASM-Sublime/avr-asm.tmLanguage",
+		"/Users/rikkigibson/Desktop/get1.pcapng",
+		"/Users/rikkigibson/bitbucket site/index.html",
+		"/Volumes/C/Users/Rikki/Source/Repos/Corvallis-Bus-Server/CorvallisBusAPI-ASP4/schedule.json",
+		"/Volumes/C/Users/Rikki/Source/Repos/Corvallis-Bus-Server/CorvallisBusAPI-ASP4/platformTags.json",
+		"/Users/rikkigibson/Xcode/CorvallisBus/CorvallisBus/Info.plist",
+		"/Users/rikkigibson/Xcode/CorvallisBus/TodayExtension/Info.plist",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/static.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/favorites (4).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/static.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/11776,10308.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/11776 (1).json",
+		"/Users/rikkigibson/bitbucket site/blog-corvallis-bus-refactor.html",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/favorites (3).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/11776.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/BUM5IT16/favorites.json",
+		"/Users/rikkigibson/Downloads/index.json",
+		"/Users/rikkigibson/Xcode/CorvallisBus/CorvallisBus.xcodeproj/project.pbxproj",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/1.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/14244,13265,13254,10723,12477,12465,12454,12449,12420,12412,12408,12386,12505,12496,14608,14612,14620,14631,14649,14654,14665,10570.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/14244,13265,13254,10723,12477,12465,12454,12449,12420,12412,12408,12386,12505,12496,14608,14612,14620,14631,14649,14654,14665,10570.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/favorites (1).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/favorites (2).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/favorites.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/favorites (3).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/IMZALV80/favorites.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/favorites (2).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/favorites (1).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/favorites.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/arrivals.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/arrivals.json",
+		"/Volumes/gibsonri/CS344/CS344_final_gibsonri/Makefile",
+		"/Volumes/gibsonri/CS344/CS344_final_gibsonri/writeup.tex",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/myar.c",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/rikkigibson/.pylintrc",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/Volumes/gibsonri/CS344/CS344_proj5_gibsonri/compute.c",
+		"/Volumes/gibsonri/.cshrc",
+		"/Volumes/gibsonri/.bashrc",
+		"/Volumes/gibsonri/CS344/CS344_proj3_gibsonri/writeup.tex",
+		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj4_gibsonri/writeup.tex",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/Makefile/Make.sublime-build",
+		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj4_gibsonri/happy_common.c",
+		"/Users/rikkigibson/Documents/C programming/datatypes.c",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/User/SublimeGDB.sublime-settings",
+		"/Users/rikkigibson/.pam_environment",
+		"/Volumes/gibsonri/CS344/CS344_proj3_gibsonri/gibsh.c",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/timetrial.py",
+		"/Volumes/gibsonri/CS344/client.c",
+		"/Volumes/gibsonri/CS344/CS344_proj1_gibsonri/sieve.c",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/Makefile",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happy_threaded.c",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happy_common.h",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happy_single.c",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happy_common.c",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/writeup.tex",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happy_multiproc.c",
+		"/Volumes/C/Users/rikkigibson/Source/Repos/Corvallis-Bus-Server/API/Startup.cs",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happy_test.c",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/primes.dat",
+		"/Volumes/gibsonri/CS344/CS344_proj4_gibsonri/happysad_common.c",
+		"/Users/rikkigibson/Documents/corvallis transit experiments/Google_Transit/stop_times.txt",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/IMZALV80/static.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/BUM5IT16/static.json",
+		"/Volumes/C/Users/rikkigibson/Downloads/14244,13265,13254,10723,12477,12465,12454,12449,12420,12412,12408,12386,12505,12496,14608,14612,14620,14631,14649,14654,14665,10570,10558,10625,10618,10602,10591,10543,10536,1 (1).json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/IMZALV80/butts.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/BUM5IT16/11776.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/14244,13265,13254,10723,12477,12465,butts.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/IMZALV80/14244,13265,13254,10723,12477,12465.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/butts.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/1IE2MSA4/14244,13265,13254,10723,12477,12465.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/FVGDUDMH/abc.json",
+		"/Volumes/C/Users/rikkigibson/Downloads/14244,13265,13254,10723,12477,12465,12454,12449,12420,12412,12408,12386,12505,12496,14608,14612,14620,14631,14649,14654,14665,10570,10558,10625,10618,10602,10591,10543,10536,1.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/BUM5IT16/14244,13265,13254,10723,12477,12465.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/IMZALV80/11776,12345.json",
+		"/Volumes/C/Users/rikkigibson/AppData/Local/Microsoft/Windows/INetCache/IE/IMZALV80/11776,95854.json",
+		"/Users/rikkigibson/go/src/github.com/cvanderschuere/go-connexionz/cts-gae.go",
+		"/Users/rikkigibson/go/src/github.com/cvanderschuere/corvallis-bus-server/googleTransitImport.go",
+		"/Volumes/gibsonri/CS344/CS344_proj3_gibsonri/testpipe.c",
+		"/Volumes/gibsonri/CS344/CS344_proj3_gibsonri/test2.c",
+		"/Volumes/gibsonri/CS344/CS344_proj3_gibsonri/test1.c",
+		"/Volumes/gibsonri/CS344/CS344_proj3_gibsonri/Makefile",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/test.a",
+		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj2_gibsonri/myar.c",
+		"/Users/rikkigibson/Library/Application Support/Sublime Text 3/Local/Session.sublime_session",
+		"/Volumes/gibsonri/CS344/cs344.sublime-project",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/derp.txt",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/test2.a",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/file_perms.c",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/file_perms.h",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/output/writeup.tex",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/test.txt",
+		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj1_gibsonri/writeup.tex",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/testfiles/test.txt",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/Makefile",
+		"/Users/rikkigibson/Downloads/parrot_mk3/parrot.c",
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/test.txt~",
+		"/Users/rikkigibson/Desktop/Excluded from backup/Shenmue_USA-JAP_DC-EVANGELiON/eva-sus.nfo",
+		"/Users/rikkigibson/Documents/OSU/CS344/assignment1/sieve.c",
+		"/Volumes/gibsonri/CS344/assignment1/Makefile",
+		"/Volumes/gibsonri/CS344/assignment1/writeup.tex",
+		"/Volumes/gibsonri/CS344/.gitignore",
+		"/Volumes/gibsonri/CS344/assignment1/assignment1.py",
+		"/Volumes/gibsonri/CS344/assignment1/sieve.c"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.c",
+			"<open folders>",
+			"gibsh.c",
+			"myar.c",
+			"",
+			"most_slashes",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"balance",
+			":",
+			"sys_elf",
+			"-fPIC",
+			"CFLAGS = -fPIC",
+			"cflags",
+			"CFLAGS = -fPIC",
+			"cflags",
+			"LCDWrite",
+			"LCDWrLn1",
+			"WriteText",
+			"LCDMaxCnt",
+			"ReadCnt",
+			"WriteText",
+			"LCDWait",
+			"p",
+			"color",
+			"textcolor",
+			"xcolor",
+			"print",
+			"9",
+			"decode_performance",
+			"def decode_performance(json):",
+			"state.clients",
+			"child_procs",
+			"children",
+			"server_sock",
+			"compute_clients",
+			"create_",
+			"create_comp",
+			"send_range",
+			"build",
+			"env",
+			"path",
+			"write_data",
+			"read_primes_from_file",
+			"write_data",
+			"primes_count",
+			"read_primes_from_file",
+			"find_primes",
+			"get_nth_bit",
+			"spawn_threads",
+			"primes_count",
+			"bitmap_size",
+			"number_list",
+			"global_happy->numbers",
+			"sad.numbers",
+			"MAX_PRIME",
+			"bytes_ptr",
+			"input_filename",
+			"bytes",
+			"has_filename",
+			"max_prime",
+			"write_to_file",
+			"thread",
+			"MAX_PRIME",
+			"UINT_MAX",
+			"sad",
+			"happy",
+			"primes_ptr",
+			"ptr",
+			"write_primes",
+			"len",
+			"find_happy_numbers",
+			"happy",
+			"test_happy_numbers",
+			"sum",
+			"cur_digit",
+			"ArnoldWay_N_ShortAve",
+			"^\"w{1,4}",
+			"(BB_\\w)|(\"\\w*_)",
+			"enc",
+			"Polyline",
+			"find_in_path",
+			"todo",
+			"set_io",
+			"command->sh_name =",
+			"malloc",
+			"is_trans",
+			"transition",
+			"parse_command",
+			"open\"",
+			"open",
+			"parse_command",
+			"' '",
+			"handle_trans",
+			"command",
+			"args",
+			"cur_cmd",
+			"sh_name",
+			"sh_filename",
+			"tokenize",
+			"argc",
+			"args",
+			"REDIR_TRUNC",
+			"REDIR_APPEND",
+			"int i ",
+			"int i",
+			"32",
+			"open",
+			"sh_isexec",
+			"exec_builtin",
+			"gdb",
+			"interpret_tokens",
+			"sh_cmd",
+			"handle_trans",
+			"find_in_path",
+			"search_dir",
+			"&&\n",
+			"parse_args",
+			"malloc",
+			"`\\n",
+			"creat(",
+			"arr_contains_string",
+			"`\\n",
+			"write_file_to_archive",
+			"write_offset_to_header",
+			"no offsets",
+			"get_files_in_directory",
+			"count_long_filenames",
+			"`\\n",
+			"read_table_length",
+			"append",
+			"write_long_filename_table",
+			"read_table_length",
+			"copy",
+			"read_table_length",
+			"tout_val"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"write_happy_numbers",
+			"sh_name",
+			"REDIR_OUT",
+			"REDIR_IN",
+			"tokenize",
+			"timer_value",
+			"long_names_count",
+			"append_long",
+			"replace_file",
+			"open_for_append",
+			"count_long_filenames",
+			"copy_across_archive",
+			"print_archive_contents",
+			"make_header",
+			"write_header_to_archive",
+			"read_header_from_archive",
+			"populate_header",
+			"is_valid_header",
+			"write_header_to_file",
+			"make_header",
+			"get_header_from_file",
+			"nextline_pos",
+			"is_print",
+			"write_file_to_archive",
+			"is_verbose_print",
+			"BIG_NUMBER_LIST",
+			"BIG_NUMBER_STRING",
+			"max_length",
+			"find_greatest_product",
+			"path_list",
+			"longest_list",
+			"files_in_directory",
+			"directory_list",
+			"    ",
+			"%d-%b-%y",
+			"%d,%b,%y",
+			"Uses_T",
+			"Supplies_T",
+			"str_to_date",
+			"%d,%m,%y",
+			"\"%d,%m,%y\"",
+			"str_to_date(",
+			"DECIMAL(",
+			"DROP TABLE IF EXISTS",
+			"TABLE IF EXISTS",
+			""
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 102.0
+	},
+	"pinned_build_system": "Debug",
+	"project": "corvallis-bus-web.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"write",
+				"writeup.tex"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 378.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

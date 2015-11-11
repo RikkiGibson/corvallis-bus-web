@@ -1,32 +1,27 @@
-// Import CSS
 import '../css/master.scss';
 import FavoritesTable from './FavoritesTable';
-
-// Import React and JS
-import HelloBox from './HelloBox';
+import TransitMap from './TransitMap';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, Link } from 'react-router'
 
-// todo: put this in component logic instead of top level so it gets called more than once
-// how to do mocking/substitution?
-// test values which can be hardcoded as needed:
-// <FavoritesTable favoriteStops={[11776,10308]} location={{lat:44.5645659, lng: -123.2620435}} />,
-
-window.localStorage.setItem("favoriteStops", JSON.stringify([11776,10308,13220]));
-var favoriteStops = JSON.parse(window.localStorage.favoriteStops);
-
-var renderApp = function(latLng) {
-	// Render!
-	React.render(
-		<FavoritesTable favoriteStops={favoriteStops} location={latLng} />,
-		document.getElementsByTagName('body')[0]
-	);
+class Navbar extends React.Component {
+	render() {
+		return (
+			<div>
+				<div><Link to="/favorites">Favorites</Link></div>
+				<div><Link to="/map">Map</Link></div>
+				{this.props.children}
+			</div>
+		);
+	}
 }
 
-if (navigator.geolocation) {
-	navigator.geolocation.getCurrentPosition(position => {
-		var latLng = { lat: position.coords.latitude, lng: position.coords.longitude };
-		renderApp(latLng);
-	}, error => {
-		renderApp();
-	})
-}
+ReactDOM.render(
+	<Router>
+		<Route path="/" component={Navbar}>
+			<Route path="favorites" component={FavoritesTable}></Route>
+			<Route path="map" component={TransitMap}></Route>
+		</Route>
+	</Router>,
+	document.getElementById('main'));
