@@ -16,7 +16,7 @@ export default class FavoritesTable extends React.Component {
 			.getFavoriteStops()
 			.then(favorites => {
 				this.setState({
-					favoriteStops: JSON.parse(favorites)
+					favoriteStops: favorites
 				})
 			}).catch(err => {
 				console.log(err);

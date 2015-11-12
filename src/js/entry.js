@@ -3,7 +3,7 @@ import FavoritesTable from './FavoritesTable';
 import TransitMap from './TransitMap';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link } from 'react-router'
+import { Router, Route, Link } from 'react-router';
 
 class Navbar extends React.Component {
 	render() {
