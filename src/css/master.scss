@@ -58,9 +58,13 @@ html {
     }
 
     .location-arrow {
-		width: 15px;
-		height: 15px;
-		position: absolute;
-		right: 8px;
+  		width: 15px;
+  		height: 15px;
+  		position: absolute;
+  		right: 8px;
+    }
+
+    .map-container {
+      height: 500px;
     }
 }

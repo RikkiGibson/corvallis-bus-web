@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import { GoogleMap, Marker } from "react-google-maps";
 import CorvallisBusClient from './CorvallisBusClient';
 
-/*
- * Sample From: https://developers.google.com/maps/documentation/javascript/examples/map-simple
- *
- * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
- */
 export default class TransitMap extends React.Component {
   constructor(props) {
     super(props);
@@ -26,41 +21,35 @@ export default class TransitMap extends React.Component {
     CorvallisBusClient
       .getStaticData()
       .then(staticData => {
-        console.log(staticData);
-        this.setState(staticData)
+        this.setState(staticData);
       });
   }
 
   render() {
     return (
-      <div>
+      <div className="map-container">
         <GoogleMap containerProps={{
             ...this.props,
             style: {
-              height: "800px",
+              height: "100%",
             },
           }}
-          defaultZoom={12}
+          ref="map"
+          defaultZoom={15}
           defaultCenter={{lat: 44.56802, lng: -123.27926}}>
 
           {
+
             Object.keys(this.state.Stops).map(key => {
               var stop = this.state.Stops[key];
-              return <Marker {...stop}
-                position={{lat: stop.Lat, lng: stop.Long}}/>
+              var clickHandler = () => alert('You clicked me: ' + stop.ID);
+              return <Marker key={stop.ID} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
             })
+
           }
 
-          </GoogleMap>
-
-          <table>
-            <tbody>
-              <tr>
-                <td>Lol</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        </GoogleMap>
+      </div>
     );
   }
 }
