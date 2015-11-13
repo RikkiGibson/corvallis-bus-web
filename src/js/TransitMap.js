@@ -18,11 +18,6 @@ export default class TransitMap extends React.Component {
   }
 
   getStaticData() {
-    CorvallisBusClient
-      .getStaticData()
-      .then(staticData => {
-        this.setState(staticData);
-      });
   }
 
   render() {
@@ -40,9 +35,9 @@ export default class TransitMap extends React.Component {
 
           {
 
-            Object.keys(this.state.Stops).map(key => {
-              var stop = this.state.Stops[key];
-              var clickHandler = () => alert('You clicked me: ' + stop.ID);
+            Object.keys(this.props.Stops).map(key => {
+              var stop = this.props.Stops[key];
+              var clickHandler = () => { this.props.setSelectedStop(stop); console.log(stop); }
               return <Marker key={stop.ID} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
             })
 

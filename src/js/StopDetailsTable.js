@@ -7,8 +7,12 @@ export default class StopDetailsTable extends React.Component {
       <table>
         <tbody>
           <tr>
-            <td>Lol</td>
+            <td>{this.props.SelectedStopDetails.Name}</td>
           </tr>
+          {
+            this.props.SelectedStopDetails.Routes.map(route => 
+              <tr><td>{route.RouteNo}</td></tr>)
+          }
         </tbody>
       </table>
     );
