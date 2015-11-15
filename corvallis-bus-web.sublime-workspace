@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"click",
+				"clickHandler"
+			],
+			[
+				"stat",
+				"staticData"
+			],
+			[
+				"load",
+				"loadingIcon"
+			],
+			[
 				"firs",
 				"firstRouteName"
 			],
@@ -502,27 +514,67 @@
 			[
 				"balla",
 				"balllabel2"
-			],
-			[
-				"car",
-				"carSimulation"
-			],
-			[
-				"planet",
-				"planetVelocities"
-			],
-			[
-				"se",
-				"stylesheet"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "src/js/FavoritesTable.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/CorvallisBusClient.js",
+			"settings":
+			{
+				"buffer_size": 2455,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/TransitMap.js",
+			"settings":
+			{
+				"buffer_size": 1131,
+				"line_ending": "Unix",
+				"name": "StopsMap.jsx"
+			}
+		},
+		{
+			"file": "src/js/TransitBrowse.js",
+			"settings":
+			{
+				"buffer_size": 1004,
+				"line_ending": "Unix",
+				"name": "TransitBrowse.js"
+			}
+		},
+		{
+			"file": "src/js/StopDetailsTable.js",
+			"settings":
+			{
+				"buffer_size": 454,
+				"line_ending": "Unix",
+				"name": "RouteDetails.js"
+			}
+		},
+		{
+			"file": "src/js/entry.js",
+			"settings":
+			{
+				"buffer_size": 691,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/master.scss",
+			"settings":
+			{
+				"buffer_size": 1204,
 				"line_ending": "Unix"
 			}
 		}
@@ -597,6 +649,14 @@
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
 			],
 			[
 				"sass",
@@ -789,14 +849,26 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/rikkigibson/Documents/corvallis-bus-web"
+		"/Users/rikkigibson/Documents/corvallis-bus-web",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/css",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/js"
 	],
 	"file_history":
 	[
 		"/Users/rikkigibson/Documents/OSU/ECE375/homework3.tex",
-		"/Users/rikkigibson/ECE375/Lab5/Lab5/main.asm",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/js/TransitMarker.js",
 		"/Users/rikkigibson/demo-webpack-react-app/src/css/master.scss",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/index.html",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/js/entry.js",
 		"/Users/rikkigibson/Documents/corvallis-bus-web/src/css/master.scss",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/webpack.config.js",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/.editorconfig",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/package.json",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/js/FavoritesRow.js",
+		"/Users/rikkigibson/Downloads/5-0.gif",
+		"/Users/rikkigibson/Documents/corvallis-bus-web/src/js/App.jsx",
+		"/Users/rikkigibson/ECE375/Lab5/Lab5/main.asm",
 		"/Users/rikkigibson/Documents/corvallis-bus-web/entry.js",
 		"/Users/rikkigibson/.bash_profile",
 		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj5_gibsonri/writeup.tex",
@@ -911,20 +983,11 @@
 		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/test.txt",
 		"/Users/rikkigibson/Documents/OSU/CS344/CS344_proj1_gibsonri/writeup.tex",
 		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/testfiles/test.txt",
-		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/Makefile",
-		"/Users/rikkigibson/Downloads/parrot_mk3/parrot.c",
-		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/test.txt~",
-		"/Users/rikkigibson/Desktop/Excluded from backup/Shenmue_USA-JAP_DC-EVANGELiON/eva-sus.nfo",
-		"/Users/rikkigibson/Documents/OSU/CS344/assignment1/sieve.c",
-		"/Volumes/gibsonri/CS344/assignment1/Makefile",
-		"/Volumes/gibsonri/CS344/assignment1/writeup.tex",
-		"/Volumes/gibsonri/CS344/.gitignore",
-		"/Volumes/gibsonri/CS344/assignment1/assignment1.py",
-		"/Volumes/gibsonri/CS344/assignment1/sieve.c"
+		"/Volumes/gibsonri/CS344/CS344_proj2_gibsonri/Makefile"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -1136,31 +1199,231 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "src/js/FavoritesTable.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								394,
+								394
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/js/CorvallisBusClient.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2397,
+								2397
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 230.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/TransitMap.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								799,
+								799
+							]
+						],
+						"settings":
+						{
+							"auto_name": "StopsMap.jsx",
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 50.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/js/TransitBrowse.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								794,
+								794
+							]
+						],
+						"settings":
+						{
+							"auto_name": "TransitBrowse.js",
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/js/StopDetailsTable.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								384,
+								384
+							]
+						],
+						"settings":
+						{
+							"auto_name": "RouteDetails.js",
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/js/entry.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/css/master.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1180,
+								1180
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 388.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

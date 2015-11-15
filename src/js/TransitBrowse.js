@@ -32,8 +32,8 @@ export default class TransitBrowse extends React.Component {
   render() {
     return (
       <div className="browse">
-        <TransitMap Stops={this.state.Stops} setSelectedStop={stop => this.setSelectedStop(stop)} />
         <StopDetailsTable SelectedStopDetails={this.state.SelectedStopDetails} />
+        <TransitMap Stops={this.state.Stops} setSelectedStop={stop => this.setSelectedStop(stop)} />
       </div>
     );
   }
