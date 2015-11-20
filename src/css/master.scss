@@ -2,93 +2,90 @@
 $phone: 480px;
 $green: #6CA7A5;
 
+body {
+  font-size: 90%;
+  font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+}
 
-html {
-    body {
-        font-size: 90%;
-        font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
-    }
+table, th, td {
+border-collapse: collapse;
+  padding: 10px;
+  border-width: 1px 0px;
+  border-color: gray;
+  border-style: solid;
+}
 
-    table, th, td {
-		border-collapse: collapse;
-	    padding: 10px;
-	    border-width: 1px 0px;
-	    border-color: gray;
-	    border-style: solid;
-    }
+.table-favorites {
+	width: 300px;
 
-    .table-favorites {
-    	width: 300px;
+	td {
+		padding-top: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+	}
+}
 
-    	td {
-    		padding-top: 5px;
-    		padding-left: 5px;
-    		padding-right: 5px;
-    		padding-bottom: 5px;
-    	}
-    }
+.route-name {
+	color: white;
+	padding: 1px;
+	margin-right: 4px;
+	width: 50px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 6px;
+}
 
-    .route-name {
-    	color: white;
-    	padding: 1px;
-    	margin-right: 4px;
-    	width: 50px;
-    	text-align: center;
-    	display: inline-block;
-    	border-radius: 6px;
-    }
+.favorite-route {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	position: relative;
+}
 
-    .favorite-route {
-    	margin-top: 2px;
-    	margin-bottom: 2px;
-    	position: relative;
-    }
+.distance {
+	color: gray;
+	font-size: 0.7em;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
 
-    .distance {
-    	color: gray;
-    	font-size: 0.7em;
-    	position: absolute;
-    	bottom: 0;
-    	right: 0;
-    }
+.favorite-row {
+	cursor: pointer;
+	cursor: hand;
 
-    .favorite-row {
-    	cursor: pointer;
-    	cursor: hand;
+}
 
-    }
+.favorite-row:hover {
+	background-color: whitesmoke;
+}
 
-    .favorite-row:hover {
-    	background-color: whitesmoke;
-    }
+.location-arrow {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 8px;
+}
 
-    .location-arrow {
-  		width: 15px;
-  		height: 15px;
-  		position: absolute;
-  		right: 8px;
-    }
+.map-container {
+  height: 500px;
+}
 
-    .map-container {
-      height: 500px;
-    }
+// TODO: flexbox to make map look good
+.browse {
 
-    // TODO: flexbox to make map look good
-    .browse {
+}
 
-    }
-
-    .stop-details {
-      float: left;
-      min-width:250px;
-      margin-right:8px;
-      @media screen and (max-width: $phone) {
-        float:none;
-      }
-      th.stop-details-header {
-        background-color: $green;
-        color:white;
-        font-weight:400;
-      }
-    }
+.stop-details {
+  float: left;
+  min-width:250px;
+  margin-right:8px;
+  @media screen and (max-width: $phone) {
+    float:none;
+  }
+  th.stop-details-header {
+    background-color: $green;
+    color:white;
+    font-weight:400;
+  }
 }

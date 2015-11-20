@@ -17,7 +17,7 @@ export default class StopDetailsTable extends React.Component {
                   : "gray"
               };
 
-              return <tr>
+              return <tr key={route.RouteNo}>
                 <td>
                   <span className="route-name" style={firstRouteStyle}>
                     {route.RouteNo}

@@ -21,6 +21,9 @@ export default class TransitMap extends React.Component {
   }
 
   render() {
+
+    console.log(Object.keys(this.props.Stops));
+    console.log(Object.keys(this.props.Stops).filter(key => key === undefined));
     return (
       <div className="map-container">
         <GoogleMap containerProps={{
@@ -34,13 +37,11 @@ export default class TransitMap extends React.Component {
           defaultCenter={{lat: 44.56802, lng: -123.27926}}>
 
           {
-
             Object.keys(this.props.Stops).map(key => {
               var stop = this.props.Stops[key];
-              var clickHandler = () => { this.props.setSelectedStop(stop); console.log(stop); }
-              return <Marker key={stop.ID} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
+              var clickHandler = () => { this.props.setSelectedStop(stop); console.log(key); }
+              return <Marker key={key} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
             })
-
           }
 
         </GoogleMap>
