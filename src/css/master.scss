@@ -1,5 +1,5 @@
 // Variables
-$phone: 640px;
+$phone: 768px;
 $lightgreen: #A1CDCB;
 $darkgreen: #26706D;
 $green: #6CA7A5;
@@ -97,7 +97,7 @@ border-collapse: collapse;
   height: 80vh;
   flex: 2;
 
-  @media screen and (max-width: $phone) {
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
     height: 60vh;
     width: 90vw;
   }
@@ -110,7 +110,7 @@ border-collapse: collapse;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  @media screen and (max-width: $phone) {
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
     flex-direction: column;
     align-items: center;
     align-content: stretch;
@@ -125,7 +125,7 @@ border-collapse: collapse;
   margin: 8px;
 
   // Stop details table should be on the bottom when there's only one column
-  @media screen and (max-width: $phone) {
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
     order: 1;
     width: 90%;
   }
