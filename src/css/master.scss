@@ -1,10 +1,35 @@
 // Variables
-$phone: 480px;
+$phone: 640px;
+$lightgreen: #A1CDCB;
+$darkgreen: #26706D;
 $green: #6CA7A5;
 
 body {
   font-size: 90%;
   font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+}
+
+.nav {
+  padding: 0px 0px;
+  display: inline;
+  margin: 0px 10px;
+  a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  .nav a:hover {
+    background-color: $green;
+  }
+  .nav a {
+    text-decoration: none;
+    color: white;
+    background-color: $darkgreen;
+    padding: 5px 5px;
+    border-radius: 4px;
+  }
+  .nav .active {
+    background-color: $green;
+  }
 }
 
 table, th, td {
@@ -68,21 +93,43 @@ border-collapse: collapse;
 }
 
 .map-container {
-  height: 500px;
+  margin: 8px;
+  height: 80vh;
+  flex: 2;
+
+  @media screen and (max-width: $phone) {
+    height: 60vh;
+    width: 90vw;
+  }
 }
 
 // TODO: flexbox to make map look good
 .browse {
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  @media screen and (max-width: $phone) {
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+  }
 }
 
 .stop-details {
-  float: left;
-  min-width:250px;
-  margin-right:8px;
+  // float: left;
+  flex: 1;
+  min-width: 33%;
+  // flex-grow: 1;
+  margin: 8px;
+
+  // Stop details table should be on the bottom when there's only one column
   @media screen and (max-width: $phone) {
-    float:none;
+    order: 1;
+    width: 90%;
   }
+
   th.stop-details-header {
     background-color: $green;
     color:white;
