@@ -12,7 +12,7 @@ export default class FavoritesTable extends React.Component {
   }
 
   update() {
-    CorvallisBusClient
+    this.props.client
       .getFavoriteStops()
       .then(favorites => {
         this.setState({

@@ -18,6 +18,11 @@ body {
   width: 30px;
 }
 
+.app-store-logo {
+  height: 40px;
+  width: 135px;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -30,6 +35,11 @@ body {
     text-decoration: none;
     color: white;
   }
+}
+
+.end {
+  text-align: right;
+  flex: 1;
 }
 
 .nav .active {
@@ -46,6 +56,10 @@ body {
   background-color: $darkgreen;
   padding: 5px 5px;
   border-radius: 4px;
+}
+
+.author-contact {
+  float: right;
 }
 
 table, th, td {
@@ -115,8 +129,7 @@ table, th, td {
 .map-container {
   margin: 8px;
   height: 80vh;
-  flex: 2;
-
+  flex: 3;
   @media only screen and (max-width: $phone) and (orientation: portrait) {
     height: 60vh;
     width: 90vw;
