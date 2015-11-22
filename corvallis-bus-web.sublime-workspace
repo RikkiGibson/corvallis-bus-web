@@ -531,7 +531,7 @@
 			"file": "src/js/CorvallisBusClient.js",
 			"settings":
 			{
-				"buffer_size": 2455,
+				"buffer_size": 2537,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "src/js/TransitMap.js",
 			"settings":
 			{
-				"buffer_size": 1131,
+				"buffer_size": 1254,
 				"line_ending": "Unix",
 				"name": "StopsMap.jsx"
 			}
@@ -557,7 +557,7 @@
 			"file": "src/js/StopDetailsTable.js",
 			"settings":
 			{
-				"buffer_size": 454,
+				"buffer_size": 915,
 				"line_ending": "Unix",
 				"name": "RouteDetails.js"
 			}
@@ -566,7 +566,7 @@
 			"file": "src/js/entry.js",
 			"settings":
 			{
-				"buffer_size": 691,
+				"buffer_size": 1043,
 				"line_ending": "Unix"
 			}
 		},
@@ -574,7 +574,7 @@
 			"file": "src/css/master.scss",
 			"settings":
 			{
-				"buffer_size": 1204,
+				"buffer_size": 2219,
 				"line_ending": "Unix"
 			}
 		}
@@ -1225,7 +1225,7 @@
 							"ensure_newline_at_eof_on_save": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 125.0,
@@ -1240,15 +1240,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2455,
+						"buffer_size": 2537,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2397,
-								2397
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1257,7 +1257,7 @@
 							"ensure_newline_at_eof_on_save": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 230.0,
@@ -1272,15 +1272,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1131,
+						"buffer_size": 1254,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								799,
-								799
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1338,15 +1338,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 454,
+						"buffer_size": 915,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								384,
-								384
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1371,15 +1371,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 691,
+						"buffer_size": 1043,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								655,
-								655
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1403,15 +1403,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1204,
+						"buffer_size": 2219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1180,
-								1180
+								0,
+								0
 							]
 						],
 						"settings":
