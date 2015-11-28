@@ -12,13 +12,6 @@ export default class TransitMap extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.getStaticData();
-  }
-
-  getStaticData() {
-  }
-
   render() {
     return (
       <div className="map-container">

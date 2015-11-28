@@ -44,7 +44,6 @@ export default class FavoritesTable extends React.Component {
     });
 
     return (
-      // todo: figure out why the new react won't let me put a header on the table
       <table className="table-favorites">
         <thead>
           <tr><td>Favorites</td></tr>
