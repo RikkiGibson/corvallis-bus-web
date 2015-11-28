@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TransitMap from './TransitMap';
-import StopDetailsTable from './StopDetailsTable';
+import TransitMap from './TransitMap.jsx';
+import StopDetailsTable from './StopDetailsTable.jsx';
 
 export default class TransitBrowse extends React.Component {
   constructor(props) {

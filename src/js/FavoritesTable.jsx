@@ -1,6 +1,6 @@
 import React from 'react';
-import CorvallisBusClient from './CorvallisBusClient';
-import FavoritesRow from './FavoritesRow';
+import CorvallisBusClient from './CorvallisBusClient.jsx';
+import FavoritesRow from './FavoritesRow.jsx';
 import spinner from '../img/loading.gif'
 
 export default class FavoritesTable extends React.Component {
