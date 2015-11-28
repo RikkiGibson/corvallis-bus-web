@@ -115,6 +115,11 @@ table, th, td {
 
 }
 
+.clickable {
+	cursor: pointer;
+	cursor: hand;
+}
+
 .favorite-row:hover {
 	background-color: whitesmoke;
 }
@@ -134,6 +139,25 @@ table, th, td {
     height: 60vh;
     width: 90vw;
   }
+  position: relative;
+}
+
+.location-button {
+  position: absolute;
+  bottom: 126px;
+  right: 7px;
+  background-color: $darkgreen;
+  width: 34px;
+  height: 34px;
+  background-image: url("../img/location-icon.png");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+}
+
+a:hover {
+  background-color: $green;
 }
 
 // TODO: flexbox to make map look good

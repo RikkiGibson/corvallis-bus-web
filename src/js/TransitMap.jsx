@@ -1,15 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { GoogleMap, Marker } from "react-google-maps";
+import LocationIcon from "../img/location-icon.png";
+import { getUserLocation } from "./CorvallisBusClient.jsx";
 
 export default class TransitMap extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      center: {lat: 44.56802, lng: -123.27926},
       Stops: {},
       Routes: {}
     };
+  }
+  
+  onGetUserLocationClicked() {
+    getUserLocation(location => { 
+        this.setState({
+          center: {
+            lat: location.coords.latitude,
+            lng: location.coords.longitude
+          }
+        });
+    });
   }
 
   render() {
@@ -23,8 +37,8 @@ export default class TransitMap extends React.Component {
           }}
           ref="map"
           defaultZoom={15}
-          defaultCenter={{lat: 44.56802, lng: -123.27926}}>
-
+          center={this.state.center}>
+          
           {
             Object.keys(this.props.Stops).map(key => {
               var stop = this.props.Stops[key];
@@ -34,6 +48,8 @@ export default class TransitMap extends React.Component {
           }
 
         </GoogleMap>
+        <a className="location-button clickable" onClick={() => this.onGetUserLocationClicked()}>
+        </a>
       </div>
     );
   }

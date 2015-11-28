@@ -11,7 +11,7 @@ var makeTestSchedule = stop => {
   return result;
 };
 
-export default class CorvallisBusService {
+export default class CorvallisBusClient {
   getFavoriteStops() {
     var makeURL = function(position) {
     var favoritesJSON = window.localStorage.favoriteStops;
@@ -74,7 +74,7 @@ function makeRequest(method, url) {
   return task;
 }
 
-function getUserLocation(resolve, reject) {
+export function getUserLocation(resolve, reject) {
   if (!navigator.geolocation) {
     reject('User location not available');
   }
