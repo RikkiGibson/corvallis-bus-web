@@ -158,6 +158,13 @@ table, th, td {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 8px;
+  
+  
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
+    background-size: 28px 28px;
+    width: 44px;
+    height: 44px;
+  }
 }
 
 
@@ -176,10 +183,16 @@ table, th, td {
   }
 }
 
+tr {
+  word-wrap: break-word;
+}
+
 .stop-details {
   flex: 1;
   min-width: 33%;
+  width: 33%;
   margin: 8px;
+  table-layout: fixed;
 
   // Stop details table should be on the bottom when there's only one column
   @media only screen and (max-width: $phone) and (orientation: portrait) {
