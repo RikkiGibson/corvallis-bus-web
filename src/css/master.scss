@@ -140,6 +140,10 @@ table, th, td {
     width: 90vw;
   }
   position: relative;
+  
+  a:hover {
+    background-color: $green;
+  }
 }
 
 .location-button {
@@ -156,9 +160,6 @@ table, th, td {
   border-radius: 8px;
 }
 
-a:hover {
-  background-color: $green;
-}
 
 // TODO: flexbox to make map look good
 .browse {

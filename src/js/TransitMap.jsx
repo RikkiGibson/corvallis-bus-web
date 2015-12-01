@@ -25,7 +25,7 @@ export default class TransitMap extends React.Component {
         });
     });
   }
-
+  
   render() {
     return (
       <div className="map-container">
@@ -38,11 +38,18 @@ export default class TransitMap extends React.Component {
           ref="map"
           defaultZoom={15}
           center={this.state.center}>
-          
           {
             Object.keys(this.props.Stops).map(key => {
               var stop = this.props.Stops[key];
-              var clickHandler = () => this.props.setSelectedStop(stop);
+              var clickHandler = () => {
+                this.setState({
+                  center: {
+                    lat: stop.Lat,
+                    lng: stop.Long
+                  }
+                });
+                this.props.setSelectedStop(stop);
+              }
               return <Marker key={key} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
             })
           }
