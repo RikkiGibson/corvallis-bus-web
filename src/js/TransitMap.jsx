@@ -9,9 +9,7 @@ export default class TransitMap extends React.Component {
     super(props);
 
     this.state = {
-      center: {lat: 44.56802, lng: -123.27926},
-      Stops: {},
-      Routes: {}
+      center: {lat: 44.56802, lng: -123.27926}
     };
   }
   
