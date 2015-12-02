@@ -149,22 +149,23 @@ table, th, td {
 .location-button {
   position: absolute;
   bottom: 126px;
-  right: 7px;
+  right: 5px;
   background-color: $darkgreen;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   background-image: url("../img/location-icon.png");
-  background-size: 22px 22px;
+  background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 10px;
   
   
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
-    background-size: 28px 28px;
-    width: 44px;
-    height: 44px;
-  }
+  // @media only screen and (max-width: $phone) and (orientation: portrait) {
+  //   background-size: 28px 28px;
+  //   width: 44px;
+  //   height: 44px;
+  //   border-radius: 12px;
+  // }
 }
 
 

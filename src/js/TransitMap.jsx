@@ -3,28 +3,40 @@ import ReactDOM from 'react-dom';
 import { GoogleMap, Marker } from "react-google-maps";
 import LocationIcon from "../img/location-icon.png";
 import { getUserLocation } from "./CorvallisBusClient.jsx";
+import userLocationImage from "../img/user-location.png";
 
 export default class TransitMap extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      center: {lat: 44.56802, lng: -123.27926}
+      center: {lat: 44.56802, lng: -123.27926},
+      userLocation: null
     };
   }
   
   onGetUserLocationClicked() {
     getUserLocation(location => { 
+        var latLng = {
+          lat: location.coords.latitude,
+          lng: location.coords.longitude
+        };
         this.setState({
-          center: {
-            lat: location.coords.latitude,
-            lng: location.coords.longitude
-          }
+          center: latLng,
+          userLocation: latLng
         });
     });
   }
   
   render() {
+    const userLocationImageData = {
+      url: userLocationImage,
+      size: new google.maps.Size(66, 66),
+      scaledSize: new google.maps.Size(22, 22),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(11, 11)
+    };
+    
     return (
       <div className="map-container">
         <GoogleMap containerProps={{
@@ -49,9 +61,10 @@ export default class TransitMap extends React.Component {
                 this.props.setSelectedStop(stop);
               }
               return <Marker key={key} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
-            })
+            }).concat(this.state.userLocation
+              ? [<Marker key={"userLocation"} position={this.state.userLocation} icon={userLocationImageData} />]
+              : [])
           }
-
         </GoogleMap>
         <a className="location-button clickable" onClick={() => this.onGetUserLocationClicked()}>
         </a>
