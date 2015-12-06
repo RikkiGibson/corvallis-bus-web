@@ -11,10 +11,6 @@ var sharedClient = new CorvallisBusClient();
 
 ReactDOM.render(
   <div>
-    <Navbar />
     <TransitBrowse client={sharedClient} />
-    <div className="footer">
-      <span className="author-contact"><a href="https://rikkigibson.github.io">Contact the author</a></span>
-    </div>
   </div>,
   document.getElementById('main'));

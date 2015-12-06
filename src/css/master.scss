@@ -62,12 +62,18 @@ body {
   float: right;
 }
 
-table, th, td {
+th {
+  padding: 8px;
+}
+table, td {
   border-collapse: collapse;
-  padding: 10px;
+  padding: 5px;
   border-width: 1px 0px;
   border-color: gray;
   border-style: solid;
+}
+td, th {
+  height: 35px;
 }
 
 .table-favorites {
@@ -140,8 +146,9 @@ table, th, td {
   height: 80vh;
   flex: 3;
   @media only screen and (max-width: $phone) and (orientation: portrait) {
-    height: 60vh;
-    width: 90vw;
+    margin: 0px;
+    height: 53vh;
+    width: 100%;
   }
   position: relative;
   
@@ -193,22 +200,15 @@ tr {
 }
 
 .stop-details {
-  flex: 1;
-  min-width: 33%;
-  width: 33%;
-  margin: 8px;
   table-layout: fixed;
-
+  width: 100%;
   // Stop details table should be on the bottom when there's only one column
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
-    order: 1;
-    width: 90%;
-  }
 
   th.stop-details-header {
     background-color: $green;
     color:white;
     font-weight:400;
+    height: 17px;
   }
 }
 
@@ -220,4 +220,24 @@ div .block {
 .schedule-summary {
   font-size: 0.8em;
   color: gray;
+}
+
+// TODO: this file desperately needs to be split up
+.table-container {
+  
+  flex: 1;
+  min-width: 33%;
+  width: 33%;
+  height: 80vh;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  display: inline-block;
+  margin: 8px;
+  
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
+    margin: 0px;
+    order: 1;
+    width: 100%;
+    height: 33vh;
+  }
 }
