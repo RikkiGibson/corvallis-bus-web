@@ -12,20 +12,20 @@ export default class StopDetailsTable extends React.Component {
             <th className="stop-details-header">{this.props.SelectedStopDetails.Name}</th>
           </tr>
           {
-            this.props.SelectedStopDetails.Routes.map(route => {
-              var schedule = ((this.props.SelectedStopArrivals[stopID] || {})[route.RouteNo] || []).join(", ");
+            this.props.SelectedStopArrivals.map(route => {
+
               var firstRouteStyle = {
-                backgroundColor: route.RouteNo.length > 0
-                  ? "#" + route.Color
+                backgroundColor: route.RouteName.length > 0
+                  ? "#" + route.RouteColor
                   : "gray"
               };
-              return <tr key={route.RouteNo}>
+              return <tr key={route.RouteName}>
                 <td>
                   <span className="route-name" style={firstRouteStyle}>
-                    {route.RouteNo}
+                    {route.RouteName}
                   </span>
                   <span>
-                    {schedule}
+                    {route.ArrivalsSummary}
                   </span>
                 </td>
               </tr>

@@ -10,7 +10,7 @@ export default class TransitBrowse extends React.Component {
       Routes: {},
       Stops: {},
       SelectedStopDetails: { Routes: [] },
-      SelectedStopArrivals: {}
+      SelectedStopArrivals: []
     };
   }
 
@@ -27,14 +27,15 @@ export default class TransitBrowse extends React.Component {
                                  .filter(route => route !== undefined);
     this.setState({
       SelectedStopDetails: stop,
-      SelectedStopArrivals: {}
+      SelectedStopArrivals: []
     });
 
     this.props.client
-      .getSchedule(stop.ID)
-      .then(schedule => {
+      .getArrivalsSummary(stop.ID)
+      .then(summary => {
+        console.log(summary);
         this.setState({
-          SelectedStopArrivals: schedule
+          SelectedStopArrivals: summary
         });
       });
   }

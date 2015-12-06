@@ -43,14 +43,10 @@ export default class CorvallisBusClient {
     return this.staticDataPromise;
   }
 
-  getSchedule(stopID) {
-    //// For testing (on Sundays or at night)
-    // return this.getStaticData()
-    //   .then(staticData => makeTestSchedule(staticData.Stops[stopID]));
-
-    var url = ROOT_URL + "/schedule/" + stopID.toString();
+  getArrivalsSummary(stopID) {
+    var url = ROOT_URL + "/arrivals-summary/" + stopID.toString();
     return new Promise(makeRequest("GET", url))
-      .then(scheduleJSON => JSON.parse(scheduleJSON))
+      .then(scheduleJSON => JSON.parse(scheduleJSON)[stopID])
   }
 }
 
