@@ -26,14 +26,22 @@ export default class TransitBrowse extends React.Component {
     stop.Routes = stop.RouteNames.map(routeName => this.state.Routes[routeName])
                                  .filter(route => route !== undefined);
     this.setState({
-      SelectedStopDetails: stop,
-      SelectedStopArrivals: []
+      SelectedStopDetails: stop
     });
 
+    var didCallBack = false;
+    setTimeout(() => {
+      if (!didCallBack) {
+        this.setState({
+          SelectedStopArrivals: []
+        });
+      }
+    }, 1000);
+    
     this.props.client
       .getArrivalsSummary(stop.ID)
       .then(summary => {
-        console.log(summary);
+        didCallBack = true;
         this.setState({
           SelectedStopArrivals: summary
         });

@@ -86,13 +86,17 @@ table, th, td {
 }
 
 .route-name {
+	margin-right: 4px;
+  span {
 	color: white;
 	padding: 1px;
-	margin-right: 4px;
 	width: 50px;
+  height: 25px;
+  vertical-align: middle;
 	text-align: center;
-	display: inline-block;
+	display: table-cell;
 	border-radius: 10px;
+  }
 }
 
 .favorite-route {
@@ -206,4 +210,14 @@ tr {
     color:white;
     font-weight:400;
   }
+}
+
+div .block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.schedule-summary {
+  font-size: 0.8em;
+  color: gray;
 }

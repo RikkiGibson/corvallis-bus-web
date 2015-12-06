@@ -21,12 +21,21 @@ export default class StopDetailsTable extends React.Component {
               };
               return <tr key={route.RouteName}>
                 <td>
-                  <span className="route-name" style={firstRouteStyle}>
-                    {route.RouteName}
-                  </span>
-                  <span>
-                    {route.ArrivalsSummary}
-                  </span>
+                  <div className="route-name block">
+                    <span className="" style={firstRouteStyle}>
+                      {route.RouteName}
+                    </span>
+                  </div>
+                  <div className="block">
+                    <div>
+                      {route.ArrivalsSummary}
+                    </div>
+                    <div>
+                      <span className="schedule-summary">
+                        {route.ScheduleSummary}
+                      </span>
+                    </div>
+                  </div>
                 </td>
               </tr>
               
