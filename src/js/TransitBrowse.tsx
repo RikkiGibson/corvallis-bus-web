@@ -1,9 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TransitMap from './TransitMap.jsx';
-import StopDetailsTable from './StopDetailsTable.jsx';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import TransitMap from './TransitMap.tsx';
+import StopDetailsTable from './StopDetailsTable.tsx';
+import CorvallisBusClient from './CorvallisBusClient.ts';
 
-export default class TransitBrowse extends React.Component {
+interface Props {
+  client: CorvallisBusClient;
+}
+
+interface State {
+  Routes?: Object;
+  Stops?: Object;
+  SelectedStopDetails?: Object;
+  SelectedStopArrivals?: Array<any>;
+}
+
+export default class TransitBrowse extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {

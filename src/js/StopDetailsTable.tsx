@@ -1,7 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-export default class StopDetailsTable extends React.Component {
+interface Props {
+  SelectedStopDetails: any;
+  SelectedStopArrivals: Array<any>;
+}
+
+interface State {
+  
+}
+
+export default class StopDetailsTable extends React.Component<Props, State> {
   render() {
     var stopID = this.props.SelectedStopDetails.ID;
 

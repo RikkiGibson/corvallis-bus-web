@@ -1,11 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { GoogleMap, Marker } from "react-google-maps";
-import LocationIcon from "../img/location-icon.png";
-import { getUserLocation } from "./CorvallisBusClient.jsx";
-import userLocationImage from "../img/user-location.png";
+import { getUserLocation } from "./CorvallisBusClient.ts";
 
-export default class TransitMap extends React.Component {
+
+// Tell TypeScript that the require function exists so it stops complaining.
+// This is how to include images using webpack.
+declare var require: (string) => any;
+var userLocationImage = require("../img/user-location.png");
+
+interface Props {
+  Stops: any;
+  setSelectedStop: any;
+}
+
+interface State {
+  center?: any;
+  userLocation?: any;
+}
+
+export default class TransitMap extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -40,7 +54,7 @@ export default class TransitMap extends React.Component {
     return (
       <div className="map-container">
         <GoogleMap containerProps={{
-            ...this.props,
+            /*...this.props,*/
             style: {
               height: "100%",
             },

@@ -1,5 +1,5 @@
 module.exports = {
-    entry: getEntrySources(['./src/js/entry.jsx']),
+    entry: getEntrySources(['./src/js/entry.tsx']),
     output: {
         publicPath: 'http://localhost:8080/',
         filename: 'build/bundle.js'
@@ -38,6 +38,10 @@ module.exports = {
                     'react-hot',
                     'babel?stage=0'
                 ]
+            },
+            {
+              test: /\.tsx?$/,
+              loader: 'babel!ts-loader'
             }
         ]
     }
