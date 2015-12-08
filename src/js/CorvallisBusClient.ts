@@ -2,30 +2,6 @@ const ROOT_URL = "https://corvallisb.us/api"
 
 export default class CorvallisBusClient {
   staticDataPromise: Promise<any>;
-  
-  // TODO: should the code for favorites be deleted or left in,
-  // considering I'm not planning to support favorites in the web version?
-  getFavoriteStops() {
-    var makeURL = function(position) {
-      var favoritesJSON = window.localStorage["favoriteStops"];
-      var stopIDs = favoritesJSON
-      ? JSON.parse(favoritesJSON)
-      : [];
-  
-      var url = ROOT_URL + "/favorites?stops=" + stopIDs.join(',') + "&location=";
-      if (position) {
-        url += position.coords.latitude + "," + position.coords.longitude;
-      }
-      return url;
-    }
-
-    var promise = new Promise(getUserLocation)
-      .then(position => new Promise(makeRequest("GET", makeURL(position))),
-        error => new Promise(makeRequest("GET", makeURL(null))))
-      .then((favoritesJSON: string) => JSON.parse(favoritesJSON));
-
-    return promise;
-  }
 
   getStaticData() {
     if (!this.staticDataPromise) {
@@ -43,7 +19,8 @@ export default class CorvallisBusClient {
   }
 }
 
-function makeRequest(method, url) {
+function makeRequest(method: string, url: string):
+                    (resolve: (any) => void, reject: (any) => void) => void {
   var task = function(resolve, reject) {
     var r = new XMLHttpRequest();
     r.open(method, url);
@@ -63,9 +40,11 @@ function makeRequest(method, url) {
   return task;
 }
 
-export function getUserLocation(resolve, reject?) {
+export function getUserLocation(resolve: PositionCallback, reject?: PositionErrorCallback): void {
   if (!navigator.geolocation) {
-    reject('User location not available');
+    var err = new PositionError();
+    err.message = "User location not available";
+    reject(err);
   }
   navigator.geolocation.getCurrentPosition(
     position => resolve(position),

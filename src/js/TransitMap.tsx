@@ -7,7 +7,6 @@ import { getUserLocation } from "./CorvallisBusClient";
 // Tell TypeScript that the require function exists so it stops complaining.
 // This is how to include images using webpack.
 declare var require: (string) => any;
-
 var userLocationImage = require("../img/user-location.png");
 
 interface Props {
@@ -16,8 +15,8 @@ interface Props {
 }
 
 interface State {
-  center?: any;
-  userLocation?: any;
+  center?: google.maps.LatLngLiteral;
+  userLocation?: google.maps.LatLngLiteral;
 }
 
 export default class TransitMap extends React.Component<Props, State> {
@@ -25,7 +24,7 @@ export default class TransitMap extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      center: {lat: 44.56802, lng: -123.27926},
+      center: { lat: 44.56802, lng: -123.27926 },
       userLocation: null
     };
   }

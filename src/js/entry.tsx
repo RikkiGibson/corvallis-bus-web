@@ -10,7 +10,6 @@ var sharedClient = new CorvallisBusClient();
 
 ReactDOM.render(
   <div>
-    <span>derppp</span>
     <TransitBrowse client={sharedClient} />
   </div>,
   document.getElementById('main'));
