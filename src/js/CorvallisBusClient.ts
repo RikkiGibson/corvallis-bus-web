@@ -1,9 +1,9 @@
 const ROOT_URL = "https://corvallisb.us/api"
 
 export default class CorvallisBusClient {
-  staticDataPromise: Promise<any>;
+  staticDataPromise: Promise<StaticData>;
 
-  getStaticData() {
+  getStaticData(): Promise<StaticData> {
     if (!this.staticDataPromise) {
       this.staticDataPromise = 
         new Promise(makeRequest("GET", ROOT_URL + "/static"))
@@ -12,7 +12,7 @@ export default class CorvallisBusClient {
     return this.staticDataPromise;
   }
 
-  getArrivalsSummary(stopID) {
+  getArrivalsSummary(stopID): Promise<Array<RouteArrivalsSummary>> {
     var url = ROOT_URL + "/arrivals-summary/" + stopID.toString();
     return new Promise(makeRequest("GET", url))
       .then((scheduleJSON: string) => JSON.parse(scheduleJSON)[stopID])

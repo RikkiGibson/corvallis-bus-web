@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GoogleMap, Marker } from "react-google-maps";
 import { getUserLocation } from "./CorvallisBusClient";
-
+import './Models.ts';
 
 // Tell TypeScript that the require function exists so it stops complaining.
 // This is how to include images using webpack.
@@ -10,8 +10,8 @@ declare var require: (string) => any;
 var userLocationImage = require("../img/user-location.png");
 
 interface Props {
-  Stops: any;
-  setSelectedStop: any;
+  stops: { [stopID: string]: BusStop };
+  setSelectedStop: (BusStop) => void;
 }
 
 interface State {
@@ -43,7 +43,7 @@ export default class TransitMap extends React.Component<Props, State> {
   }
   
   render() {
-    const userLocationImageData = {
+    const userLocationImageData: google.maps.Icon = {
       url: userLocationImage,
       size: new google.maps.Size(66, 66),
       scaledSize: new google.maps.Size(22, 22),
@@ -63,18 +63,19 @@ export default class TransitMap extends React.Component<Props, State> {
           defaultZoom={15}
           center={this.state.center}>
           {
-            Object.keys(this.props.Stops).map(key => {
-              var stop = this.props.Stops[key];
+            Object.keys(this.props.stops).map(key => {
+              var stop = this.props.stops[key];
+              var stopPosition = {
+                lat: stop.lat,
+                lng: stop.lng
+              };
               var clickHandler = () => {
                 this.setState({
-                  center: {
-                    lat: stop.Lat,
-                    lng: stop.Long
-                  }
+                  center: stopPosition 
                 });
                 this.props.setSelectedStop(stop);
               }
-              return <Marker key={key} position={{lat: stop.Lat, lng: stop.Long}} onClick={clickHandler}/>
+              return <Marker key={key} position={stopPosition} onClick={clickHandler}/>
             }).concat(this.state.userLocation
               ? [<Marker key={"userLocation"} position={this.state.userLocation} icon={userLocationImageData} />]
               : [])

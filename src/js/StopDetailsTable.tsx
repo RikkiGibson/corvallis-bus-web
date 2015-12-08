@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import './Models.ts';
 
 interface Props {
-  SelectedStopDetails: any;
-  SelectedStopArrivals: Array<any>;
+  selectedStop: BusStop;
+  selectedStopArrivalsSummary: Array<RouteArrivalsSummary>;
 }
 
 interface State {
@@ -12,37 +13,39 @@ interface State {
 
 export default class StopDetailsTable extends React.Component<Props, State> {
   render() {
-    var stopID = this.props.SelectedStopDetails.ID;
-
+    var stopName = this.props.selectedStop
+      ? this.props.selectedStop.name
+      : "";
+    
     return (
       <div className="table-container">
         <table className="stop-details">
           <tbody>
             <tr>
-              <th className="stop-details-header">{this.props.SelectedStopDetails.Name}</th>
+              <th className="stop-details-header">{stopName}</th>
             </tr>
             {
-              this.props.SelectedStopArrivals.map(route => {
+              this.props.selectedStopArrivalsSummary.map(routeSummary => {
   
                 var firstRouteStyle = {
-                  backgroundColor: route.RouteName.length > 0
-                    ? "#" + route.RouteColor
+                  backgroundColor: routeSummary.routeName.length > 0
+                    ? "#" + routeSummary.routeColor
                     : "gray"
                 };
-                return <tr key={route.RouteName}>
+                return <tr key={routeSummary.routeName}>
                   <td>
                     <div className="route-name block">
                       <span className="" style={firstRouteStyle}>
-                        {route.RouteName}
+                        {routeSummary.routeName}
                       </span>
                     </div>
                     <div className="block">
                       <div>
-                        {route.ArrivalsSummary}
+                        {routeSummary.arrivalsSummary}
                       </div>
                       <div>
                         <span className="schedule-summary">
-                          {route.ScheduleSummary}
+                          {routeSummary.scheduleSummary}
                         </span>
                       </div>
                     </div>
