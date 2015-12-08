@@ -11,6 +11,7 @@ var userLocationImage = require("../img/user-location.png");
 
 interface Props {
   stops: { [stopID: string]: BusStop };
+  selectedStopID?: number;
   setSelectedStop: (BusStop) => void;
 }
 
@@ -51,10 +52,24 @@ export default class TransitMap extends React.Component<Props, State> {
       anchor: new google.maps.Point(11, 11)
     };
     
+    const busStopImageData: google.maps.Icon = {
+      url: require("../img/greenoval.png"),
+      size: new google.maps.Size(96, 117),
+      scaledSize: new google.maps.Size(37, 45),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(18.5, 45)
+    };
+    
+    const selectedStopImageData: google.maps.Icon = {
+      url: require("../img/greenoval-highlighted.png"),
+      size: new google.maps.Size(96, 117),
+      scaledSize: new google.maps.Size(45, 55),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(22.5, 55),
+    };
     return (
       <div className="map-container">
         <GoogleMap containerProps={{
-            /*...this.props,*/
             style: {
               height: "100%",
             },
@@ -75,7 +90,9 @@ export default class TransitMap extends React.Component<Props, State> {
                 });
                 this.props.setSelectedStop(stop);
               }
-              return <Marker key={key} position={stopPosition} onClick={clickHandler}/>
+              var isSelected = this.props.selectedStopID == stop.id;
+              return <Marker key={key} position={stopPosition} onClick={clickHandler}
+                             icon={isSelected ? selectedStopImageData : busStopImageData} zIndex={isSelected ? 2 : 1} />
             }).concat(this.state.userLocation
               ? [<Marker key={"userLocation"} position={this.state.userLocation} icon={userLocationImageData} />]
               : [])
