@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import ReactDOM from 'react-dom';
 import CorvallisBusIcon from '../img/corvallisbus-icon.png';
 import AppStoreIcon from '../img/app-store-icon.png';
@@ -25,3 +25,4 @@ export default class Navbar extends React.Component {
     );
   }
 }
+*/

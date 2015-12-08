@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import TransitMap from './TransitMap.tsx';
-import StopDetailsTable from './StopDetailsTable.tsx';
-import CorvallisBusClient from './CorvallisBusClient.ts';
+import TransitMap from './TransitMap';
+import StopDetailsTable from './StopDetailsTable';
+import CorvallisBusClient from './CorvallisBusClient';
 
 interface Props {
   client: CorvallisBusClient;

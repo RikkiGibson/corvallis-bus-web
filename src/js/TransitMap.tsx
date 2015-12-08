@@ -1,12 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GoogleMap, Marker } from "react-google-maps";
-import { getUserLocation } from "./CorvallisBusClient.ts";
+import { getUserLocation } from "./CorvallisBusClient";
 
 
 // Tell TypeScript that the require function exists so it stops complaining.
 // This is how to include images using webpack.
 declare var require: (string) => any;
+
 var userLocationImage = require("../img/user-location.png");
 
 interface Props {

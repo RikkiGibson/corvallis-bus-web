@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: getEntrySources(['./src/js/entry.tsx']),
     output: {
@@ -41,9 +43,18 @@ module.exports = {
             },
             {
               test: /\.tsx?$/,
-              loader: 'babel!ts-loader'
+              exclude: /(node_modules|bower_components)/,
+              loaders: [
+                'react-hot',
+                'babel?stage=0',
+                'ts-loader'
+              ]
             }
         ]
+    },
+    resolve: {
+      root: path.resolve('.'), 
+      extensions: ["", ".js", ".jsx", ".ts", ".tsx"]
     }
 };
 
