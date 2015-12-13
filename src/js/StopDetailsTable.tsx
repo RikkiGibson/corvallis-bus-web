@@ -18,45 +18,43 @@ export default class StopDetailsTable extends React.Component<Props, State> {
       : "";
     
     return (
-      <div className="table-container">
-        <table className="stop-details">
-          <tbody>
-            <tr>
-              <th className="stop-details-header">{stopName}</th>
-            </tr>
-            {
-              this.props.selectedStopArrivalsSummary.map(routeSummary => {
-  
-                var firstRouteStyle = {
-                  backgroundColor: routeSummary.routeName.length > 0
-                    ? "#" + routeSummary.routeColor
-                    : "gray"
-                };
-                return <tr key={routeSummary.routeName}>
-                  <td>
-                    <div className="route-name block">
-                      <span className="" style={firstRouteStyle}>
-                        {routeSummary.routeName}
+      <table className="stop-details">
+        <tbody>
+          <tr>
+            <th className="stop-details-header">{stopName}</th>
+          </tr>
+          {
+            this.props.selectedStopArrivalsSummary.map(routeSummary => {
+
+              var firstRouteStyle = {
+                backgroundColor: routeSummary.routeName.length > 0
+                  ? "#" + routeSummary.routeColor
+                  : "gray"
+              };
+              return <tr key={routeSummary.routeName}>
+                <td>
+                  <div className="route-name block">
+                    <span className="" style={firstRouteStyle}>
+                      {routeSummary.routeName}
+                    </span>
+                  </div>
+                  <div className="block">
+                    <div>
+                      {routeSummary.arrivalsSummary}
+                    </div>
+                    <div>
+                      <span className="schedule-summary">
+                        {routeSummary.scheduleSummary}
                       </span>
                     </div>
-                    <div className="block">
-                      <div>
-                        {routeSummary.arrivalsSummary}
-                      </div>
-                      <div>
-                        <span className="schedule-summary">
-                          {routeSummary.scheduleSummary}
-                        </span>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                
-              })
-            }
-          </tbody>
-        </table>
-      </div>
+                  </div>
+                </td>
+              </tr>
+              
+            })
+          }
+        </tbody>
+      </table>
     );
   }
 }

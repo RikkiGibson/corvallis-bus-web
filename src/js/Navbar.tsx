@@ -1,8 +1,9 @@
-/*import React from 'react';
-import ReactDOM from 'react-dom';
-import CorvallisBusIcon from '../img/corvallisbus-icon.png';
+/*import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+declare var require: (string) => any;
+var CorvallisBusIcon = require('../img/corvallisbus-icon.png');
 import AppStoreIcon from '../img/app-store-icon.png';
-import { Link } from 'react-router';
 
 export default class Navbar extends React.Component {
   render() {

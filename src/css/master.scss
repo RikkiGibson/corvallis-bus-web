@@ -1,66 +1,4 @@
-// Variables
-$phone: 768px;
-$lightgreen: #A1CDCB;
-$darkgreen: #26706D;
-$green: #6CA7A5;
-
-body {
-  font-size: 90%;
-  font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
-}
-
-.logo {
-  margin-right: 5px;
-}
-
-.logo-image {
-  height: 30px;
-  width: 30px;
-}
-
-.app-store-logo {
-  height: 40px;
-  width: 135px;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  margin: 0px 10px;
-}
-
-.nav {
-  margin: 0px 2px;
-  a:link, a:visited {
-    text-decoration: none;
-    color: white;
-  }
-}
-
-.end {
-  text-align: right;
-  flex: 1;
-}
-
-.nav .active {
-  background-color: $green;
-}
-
-.nav a:hover {
-  background-color: $green;
-}
-
-.nav a {
-  text-decoration: none;
-  color: white;
-  background-color: $darkgreen;
-  padding: 5px 5px;
-  border-radius: 4px;
-}
-
-.author-contact {
-  float: right;
-}
+@import "constants.scss";
 
 th {
   padding: 8px;
@@ -76,21 +14,6 @@ td, th {
   height: 35px;
 }
 
-.table-favorites {
-	width: 300px;
-  margin: 10px;
-	td {
-		padding-top: 5px;
-		padding-left: 5px;
-		padding-right: 5px;
-		padding-bottom: 5px;
-	}
-  thead {
-    text-align: center;
-    font-weight: bold;
-  }
-}
-
 .route-name {
 	margin-right: 4px;
   span {
@@ -103,26 +26,6 @@ td, th {
 	display: table-cell;
 	border-radius: 10px;
   }
-}
-
-.favorite-route {
-	margin-top: 2px;
-	margin-bottom: 2px;
-	position: relative;
-}
-
-.distance {
-	color: gray;
-	font-size: 0.7em;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-.favorite-row {
-	cursor: pointer;
-	cursor: hand;
-
 }
 
 .clickable {
@@ -141,22 +44,6 @@ td, th {
 	right: 8px;
 }
 
-.map-container {
-  margin: 8px;
-  height: 80vh;
-  flex: 3;
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
-    margin: 0px;
-    height: 53vh;
-    width: 100%;
-  }
-  position: relative;
-  
-  a:hover {
-    background-color: $green;
-  }
-}
-
 .location-button {
   position: absolute;
   bottom: 126px;
@@ -169,30 +56,6 @@ td, th {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  
-  
-  // @media only screen and (max-width: $phone) and (orientation: portrait) {
-  //   background-size: 28px 28px;
-  //   width: 44px;
-  //   height: 44px;
-  //   border-radius: 12px;
-  // }
-}
-
-
-// TODO: flexbox to make map look good
-.browse {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-content: stretch;
-
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 tr {
@@ -237,7 +100,8 @@ div .block {
   @media only screen and (max-width: $phone) and (orientation: portrait) {
     margin: 0px;
     order: 1;
-    width: 100%;
+    align-content: center;
+    width: 98%;
     height: 33vh;
   }
 }
