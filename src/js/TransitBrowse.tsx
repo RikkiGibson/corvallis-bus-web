@@ -12,7 +12,9 @@ export default class TransitBrowse {
   
   constructor(private client: CorvallisBusClient, private stopDetailsDiv: HTMLElement,
               mapDiv: HTMLElement, userLocationButton: HTMLElement) {
-    this.refreshStopDetails();
+    this.refreshStopDetails()
+    setInterval(() => this.refreshStopDetails(), 30000);
+    
     this.transitMap = new TransitMap(mapDiv, userLocationButton,
       client.getStaticData(), stop => this.setSelectedStop(stop));
   }

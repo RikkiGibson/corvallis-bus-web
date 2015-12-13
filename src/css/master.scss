@@ -28,13 +28,21 @@ td, th {
   }
 }
 
-.clickable {
+.clickable-row {
 	cursor: pointer;
 	cursor: hand;
 }
 
-.favorite-row:hover {
+.clickable-row:hover {
 	background-color: whitesmoke;
+}
+
+.selected {
+  background-color: gainsboro;
+}
+
+.selected:hover {
+  background-color: gainsboro;
 }
 
 .location-arrow {
