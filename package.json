@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile_sass": "sass src/css/index.scss | postcss --use autoprefixer > build/css/index.css",
-    "build": "npm run compile_sass && webpack"
+    "sass_dev": "sass src/css/index.scss | postcss --use autoprefixer > build/css/index.css",
+    "sass": "sass src/css/index.scss | postcss --use autoprefixer | cssnano > build/css/index.css",
+    "devbuild": "npm run sass_dev && webpack",
+    "build": "npm run sass && webpack -p"
   },
   "author": "rikkigibson",
   "devDependencies": {
