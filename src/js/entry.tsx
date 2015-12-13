@@ -9,7 +9,7 @@ import CorvallisBusClient from './CorvallisBusClient';
 
 var sharedClient = new CorvallisBusClient();
 
-var transitMap = new TransitMap(document.getElementById('map-container'), sharedClient.getStaticData());
+var transitMap = new TransitMap(document.getElementById('map'), sharedClient.getStaticData());
 
 ReactDOM.render(
   <TransitBrowse client={sharedClient} />,
