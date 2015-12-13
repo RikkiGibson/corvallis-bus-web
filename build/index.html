@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Corvallis Bus</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="logo">
+        <img class="logo-image" src="img/corvallisbus-icon.png" />
+      </div>
+      <div class="nav">
+        <a href="about.html">About</a>
+      </div>
+      <div class="nav">
+        <a href="http://www.corvallisoregon.gov/index.aspx?page=1105" target="_blank">
+          Service Alerts
+        </a>
+      </div>
+    </div>
+    <div id="browse" class="browse">
+      <div id="stop-details" class="table-container"></div>
+      <div class="map-container">
+        <div id="map" class="map"></div>
+        <a id="user-location-button" class="location-button clickable"></a>
+      </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUrWz47ar9OpfjH_ytw1dgO8b9hslLNmg"></script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

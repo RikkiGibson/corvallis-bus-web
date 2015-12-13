@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile_sass": "sass src/css/index.scss | postcss --use autoprefixer > build/index.css",
+    "compile_sass": "sass src/css/index.scss | postcss --use autoprefixer > build/css/index.css",
     "build": "npm run compile_sass && webpack"
   },
   "author": "rikkigibson",

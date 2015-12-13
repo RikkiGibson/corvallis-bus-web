@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
     entry: './src/js/entry.tsx',
     output: {
-        filename: 'build/bundle.js'
+        filename: 'build/js/bundle.js'
     },
     devtool: 'eval',
     module: {
