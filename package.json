@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile_sass": "sass src/css/index.scss > build/index.css",
+    "compile_sass": "sass src/css/index.scss | postcss --use autoprefixer > build/index.css",
     "build": "npm run compile_sass && webpack"
   },
   "author": "rikkigibson",
@@ -33,11 +33,12 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
+    "es5-shim": "^4.4.0",
+    "es6-promise": "^3.0.2",
     "history": "^1.13.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-router": "^1.0.0",
-    "react-google-maps": "^4.2.0"
+    "react-google-maps": "^4.2.0",
+    "react-router": "^1.0.0"
   }
 }
-
