@@ -5,67 +5,47 @@ import StopDetailsTable from './StopDetailsTable';
 import CorvallisBusClient from './CorvallisBusClient';
 import './Models.ts';
 
-interface Props {
-  client: CorvallisBusClient;
-}
-
-interface State {
-  routes?: { [routeName: string]: BusRoute };
-  stops?: { [stopID: string]: BusStop };
-  selectedStop?: BusStop;
-  selectedStopArrivalsSummary?: Array<RouteArrivalsSummary>;
-}
-
-export default class TransitBrowse extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      routes: {},
-      stops: {},
-      selectedStop: null,
-      selectedStopArrivalsSummary: []
-    };
+export default class TransitBrowse {
+  private transitMap: TransitMap;
+  private selectedStop: BusStop;
+  private selectedStopArrivalsSummary: Array<RouteArrivalsSummary> = [];
+  
+  constructor(private client: CorvallisBusClient, private stopDetailsDiv: HTMLElement,
+              mapDiv: HTMLElement, userLocationButton: HTMLElement) {
+    this.refreshStopDetails();
+    this.transitMap = new TransitMap(mapDiv, userLocationButton,
+      client.getStaticData(), stop => this.setSelectedStop(stop));
   }
-
-  componentDidMount() {
-    this.props.client
-      .getStaticData()
-      .then(staticData => {
-        console.log(staticData);
-        this.setState(staticData);
+  
+  refreshStopDetails() {
+    this.renderStopDetailsTable();
+    
+    if (this.selectedStop) {
+      let didCallBack = false;
+      
+      this.client.getArrivalsSummary(this.selectedStop.id).then(arrivalsSummaries => {
+        didCallBack = true;
+        this.selectedStopArrivalsSummary = arrivalsSummaries
+        this.renderStopDetailsTable();
       });
+      
+      setTimeout(() => {
+        if (!didCallBack) {
+          this.selectedStopArrivalsSummary = [];
+          this.renderStopDetailsTable();
+        }
+      }, 1000);
+    }
+  }
+  
+  renderStopDetailsTable() {
+    ReactDOM.render(<StopDetailsTable selectedStop={this.selectedStop}
+                        selectedStopArrivalsSummary={this.selectedStopArrivalsSummary} />,
+                    this.stopDetailsDiv);
   }
 
   setSelectedStop(stop: BusStop) {
-    this.setState({
-      selectedStop: stop
-    });
-
-    var didCallBack = false;
-    setTimeout(() => {
-      if (!didCallBack) {
-        this.setState({
-          selectedStopArrivalsSummary: []
-        });
-      }
-    }, 1000);
-    
-    this.props.client
-      .getArrivalsSummary(stop.id)
-      .then(summary => {
-        didCallBack = true;
-        this.setState({
-          selectedStopArrivalsSummary: summary
-        });
-      });
-  }
-
-  render() {
-    return (
-        <StopDetailsTable selectedStop={this.state.selectedStop}
-                          selectedStopArrivalsSummary={this.state.selectedStopArrivalsSummary} />
-    );/*<TransitMap stops={this.state.stops} setSelectedStop={stop => this.setSelectedStop(stop)}
-                    selectedStopID={this.state.selectedStop && this.state.selectedStop.id}/>*/
-    
+    this.selectedStop = stop;
+    this.refreshStopDetails();
   }
 }
