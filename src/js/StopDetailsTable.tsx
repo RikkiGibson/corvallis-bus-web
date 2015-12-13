@@ -5,10 +5,12 @@ import './Models.ts';
 interface Props {
   selectedStop: BusStop;
   selectedStopArrivalsSummary: Array<RouteArrivalsSummary>;
+  selectedRouteName: string;
+  setSelectedRoute: (string) => void;
 }
 
 interface State {
-  selectedIndex: number;
+  
 }
 
 export default class StopDetailsTable extends React.Component<Props, State> {
@@ -18,9 +20,7 @@ export default class StopDetailsTable extends React.Component<Props, State> {
   }
   
   onClickTableRow(index: number) {
-    this.setState({
-      selectedIndex: index
-    });
+    this.props.setSelectedRoute(this.props.selectedStopArrivalsSummary[index].routeName);
   }
   
   render() {
@@ -43,7 +43,7 @@ export default class StopDetailsTable extends React.Component<Props, State> {
                   : "gray"
               };
               
-              var isSelected = index === this.state.selectedIndex;
+              var isSelected = routeSummary.routeName === this.props.selectedRouteName;
               
               return (
                 <tr key={routeSummary.routeName}

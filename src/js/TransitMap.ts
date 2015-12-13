@@ -6,7 +6,14 @@ import './Models.ts';
 // Tell TypeScript that the require function exists so it stops complaining.
 // This is how to include images using webpack.
 declare var require: (string) => any;
-var userLocationImage = require("../img/user-location.png");
+
+const USER_LOCATION_ICON: google.maps.Icon = {
+  url: require("../img/user-location.png"),
+  size: new google.maps.Size(66, 66),
+  scaledSize: new google.maps.Size(22, 22),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(11, 11)
+};
 
 const BUS_STOP_ICON: google.maps.Icon = {
   url: require("../img/greenoval.png"),
@@ -14,14 +21,6 @@ const BUS_STOP_ICON: google.maps.Icon = {
   scaledSize: new google.maps.Size(37, 45),
   origin: new google.maps.Point(0, 0),
   anchor: new google.maps.Point(18.5, 45)
-};
-
-const USER_LOCATION_ICON: google.maps.Icon = {
-  url: userLocationImage,
-  size: new google.maps.Size(66, 66),
-  scaledSize: new google.maps.Size(22, 22),
-  origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(11, 11)
 };
 
 const BUS_STOP_SELECTED_ICON: google.maps.Icon = {
@@ -32,11 +31,20 @@ const BUS_STOP_SELECTED_ICON: google.maps.Icon = {
   anchor: new google.maps.Point(22.5, 55),
 };
 
+const BUS_STOP_DEEMPHASIZED_ICON: google.maps.Icon = {
+  url: require("../img/greenoval-deemphasized.png"),
+  size: new google.maps.Size(96, 117),
+  scaledSize: new google.maps.Size(37, 45),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(18.5, 45)
+};
+
 export default class TransitMap {
   private map: google.maps.Map;
-  private stopMarkers: { [stopID: number]: google.maps.Marker } = {};
-  private selectedMarker: google.maps.Marker;
+  private stopMarkers: { [stopID: string]: google.maps.Marker } = {};
   private userLocation: google.maps.Marker;
+  private selectedRoute: BusRoute;
+  private selectedStopID: number;
   
   constructor(mapDiv: HTMLElement, userLocationButton: HTMLElement,
               private staticDataPromise: Promise<StaticData>,
@@ -68,13 +76,16 @@ export default class TransitMap {
   }
   
   onClickMapMarker(marker: google.maps.Marker, stop: BusStop) {
-    this.setSelectedStop(stop);
-    
-    if (this.selectedMarker) {
-      this.selectedMarker.setIcon(BUS_STOP_ICON);
+    // Clear out the old marker
+    var oldStop = this.stopMarkers[this.selectedStopID]; 
+    if (oldStop) {
+      oldStop.setIcon(BUS_STOP_ICON);
+      oldStop.setZIndex(2);
     }
+    this.selectedStopID = stop.id;
+    this.setSelectedStop(stop);
     marker.setIcon(BUS_STOP_SELECTED_ICON);
-    this.selectedMarker = marker;
+    marker.setZIndex(3);
   }
   
   onClickUserLocation() {
@@ -96,4 +107,55 @@ export default class TransitMap {
       }
     });
   }
+  
+  /** Called by the parent to inform that the table selected a particular route. */
+  setSelectedRoute(route: BusRoute) {
+    if (this.selectedRoute === route) {
+      return;
+    }
+    if (this.selectedRoute && this.selectedRoute.googlePolyline) {
+      this.selectedRoute.googlePolyline.setMap(null);
+    }
+    route.googlePolyline = route.googlePolyline || new google.maps.Polyline({
+      path: google.maps.geometry.encoding.decodePath(route.polyline),
+      strokeColor: "#" + route.color,
+      strokeOpacity: 1,
+      strokeWeight: 4
+    });
+    route.googlePolyline.setMap(this.map);
+    
+    for (var stopID in this.stopMarkers) {
+      if (this.selectedStopID == stopID) {
+        this.stopMarkers[stopID].setIcon(BUS_STOP_SELECTED_ICON);
+        this.stopMarkers[stopID].setZIndex(3);
+      } else if (stopID in routePathSet(route)) {
+        this.stopMarkers[stopID].setIcon(BUS_STOP_ICON);
+        this.stopMarkers[stopID].setZIndex(2);
+      } else {
+        this.stopMarkers[stopID].setIcon(BUS_STOP_DEEMPHASIZED_ICON);
+        this.stopMarkers[stopID].setZIndex(1);
+      }
+      
+    }
+    
+    this.selectedRoute = route;
+  }
 }
+
+var routePathSet = function() {
+  var sets = {};
+  return function(route: BusRoute) {
+    var currentSet = sets[route.routeNo]; 
+    if (currentSet) {
+      return currentSet;
+    }
+    
+    currentSet = {};
+    for (var stopID of route.path) {
+      currentSet[stopID] = true;
+    }
+    sets[route.routeNo] = currentSet;
+    
+    return currentSet;
+  }
+}();

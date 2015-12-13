@@ -21,6 +21,7 @@ interface BusRoute {
   color: string;
   url: string;
   polyline: string;
+  googlePolyline?: google.maps.Polyline;
 }
 
 interface StaticData {

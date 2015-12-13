@@ -1,7 +1,7 @@
 const ROOT_URL = "https://corvallisb.us/api"
 
 export default class CorvallisBusClient {
-  staticDataPromise: Promise<StaticData>;
+  private staticDataPromise: Promise<StaticData>;
 
   getStaticData(): Promise<StaticData> {
     if (!this.staticDataPromise) {

@@ -9,6 +9,7 @@ export default class TransitBrowse {
   private transitMap: TransitMap;
   private selectedStop: BusStop;
   private selectedStopArrivalsSummary: Array<RouteArrivalsSummary> = [];
+  private selectedRouteName: string;
   
   constructor(private client: CorvallisBusClient, private stopDetailsDiv: HTMLElement,
               mapDiv: HTMLElement, userLocationButton: HTMLElement) {
@@ -42,12 +43,28 @@ export default class TransitBrowse {
   
   renderStopDetailsTable() {
     ReactDOM.render(<StopDetailsTable selectedStop={this.selectedStop}
-                        selectedStopArrivalsSummary={this.selectedStopArrivalsSummary} />,
+                        selectedStopArrivalsSummary={this.selectedStopArrivalsSummary}
+                        selectedRouteName={this.selectedRouteName}
+                        setSelectedRoute={routeName => this.setSelectedRoute(routeName)} />,
                     this.stopDetailsDiv);
   }
 
   setSelectedStop(stop: BusStop) {
     this.selectedStop = stop;
     this.refreshStopDetails();
+    
+    if (stop.routeNames.indexOf(this.selectedRouteName) === -1) {
+      this.setSelectedRoute(stop.routeNames[0]);
+    }
+  }
+  
+  /** Called by the stop details table in order to draw the polyline on the map. */
+  setSelectedRoute(routeName: string) {
+    this.selectedRouteName = routeName;
+    this.renderStopDetailsTable();
+    
+    this.client.getStaticData().then(staticData => {
+      this.transitMap.setSelectedRoute(staticData.routes[routeName]);
+    });
   }
 }
