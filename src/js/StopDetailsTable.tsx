@@ -65,7 +65,7 @@ export default class StopDetailsTable extends React.Component<Props, State> {
                       </div>
                     </div>
                     <div className="block end">
-                      <a href={routeSummary.routeURL}>
+                      <a href={routeSummary.routeURL} target="_blank">
                         <img className="more-info" src={require("../img/idea.png")} />
                       </a>
                     </div>

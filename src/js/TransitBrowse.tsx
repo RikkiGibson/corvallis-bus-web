@@ -63,6 +63,9 @@ export default class TransitBrowse {
   }
 
   setSelectedStop(stop: BusStop) {
+    // Scroll so the whole table is visible on mobile devices
+    this.stopDetailsDiv.scrollIntoView();
+    
     this.selectedStop = stop;
     this.refreshStopDetails();
     
