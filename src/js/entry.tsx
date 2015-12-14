@@ -1,8 +1,5 @@
 import '../css/master.scss';
 import TransitBrowse from './TransitBrowse';
-import TransitMap from './TransitMap';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import CorvallisBusClient from './CorvallisBusClient';
 import 'es5-shim';
 

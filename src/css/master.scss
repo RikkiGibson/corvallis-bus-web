@@ -28,9 +28,16 @@ td, th {
   }
 }
 
-.clickable-row {
+@mixin clickable() {
 	cursor: pointer;
 	cursor: hand;
+}
+
+.clickable {
+	@include clickable();
+}
+.clickable-row {
+	@include clickable();
 }
 
 .clickable-row:hover {
@@ -86,6 +93,21 @@ tr {
 div .block {
   display: inline-block;
   vertical-align: middle;
+}
+
+div .end {
+  float: right;
+}
+
+.more-info {
+  width: 33px;
+  height: 33px;
+  vertical-align: middle;
+    opacity: .75;
+}
+
+.more-info:hover {
+    opacity: 1;
 }
 
 .schedule-summary {

@@ -33,12 +33,17 @@ interface RouteArrivalsSummary {
   /** The name of the route, e.g. "3" or "NON". */
   routeName: string;
   
-  /** The color of the route as a hex string, e.g. "FF40E3". */
-  routeColor: string;
-  
   /** A user-friendly description of upcoming arrival times. */
   arrivalsSummary: string;
   
   /** A user-friendly description of today's schedule for the route. */
+  scheduleSummary: string;
+}
+
+interface RouteArrivalsViewModel {
+  routeName: string;
+  routeColor: string;
+  routeURL: string;
+  arrivalsSummary: string;
   scheduleSummary: string;
 }

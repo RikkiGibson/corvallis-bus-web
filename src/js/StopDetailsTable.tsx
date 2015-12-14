@@ -2,9 +2,11 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './Models.ts';
 
+declare var require: (string) => any;
+
 interface Props {
   selectedStop: BusStop;
-  selectedStopArrivalsSummary: Array<RouteArrivalsSummary>;
+  selectedStopArrivalsViewModel: Array<RouteArrivalsViewModel>;
   selectedRouteName: string;
   setSelectedRoute: (string) => void;
 }
@@ -16,11 +18,10 @@ interface State {
 export default class StopDetailsTable extends React.Component<Props, State> {
   constructor(props) {
     super(props);
-    this.state = { selectedIndex: -1 };
   }
   
   onClickTableRow(index: number) {
-    this.props.setSelectedRoute(this.props.selectedStopArrivalsSummary[index].routeName);
+    this.props.setSelectedRoute(this.props.selectedStopArrivalsViewModel[index].routeName);
   }
   
   render() {
@@ -35,12 +36,10 @@ export default class StopDetailsTable extends React.Component<Props, State> {
             <th className="stop-details-header">{stopName}</th>
           </tr>
           {
-            this.props.selectedStopArrivalsSummary.map((routeSummary, index) => {
+            this.props.selectedStopArrivalsViewModel.map((routeSummary, index) => {
 
               var firstRouteStyle = {
-                backgroundColor: routeSummary.routeName.length > 0
-                  ? "#" + routeSummary.routeColor
-                  : "gray"
+                backgroundColor: "#" + routeSummary.routeColor
               };
               
               var isSelected = routeSummary.routeName === this.props.selectedRouteName;
@@ -64,6 +63,11 @@ export default class StopDetailsTable extends React.Component<Props, State> {
                           {routeSummary.scheduleSummary}
                         </span>
                       </div>
+                    </div>
+                    <div className="block end">
+                      <a href={routeSummary.routeURL}>
+                        <img className="more-info" src={require("../img/idea.png")} />
+                      </a>
                     </div>
                   </td>
                 </tr>

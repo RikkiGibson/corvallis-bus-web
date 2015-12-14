@@ -8,7 +8,7 @@ import './Models.ts';
 export default class TransitBrowse {
   private transitMap: TransitMap;
   private selectedStop: BusStop;
-  private selectedStopArrivalsSummary: Array<RouteArrivalsSummary> = [];
+  private selectedStopArrivalsViewModel: Array<RouteArrivalsViewModel> = [];
   private selectedRouteName: string;
   
   constructor(private client: CorvallisBusClient, private stopDetailsDiv: HTMLElement,
@@ -23,27 +23,40 @@ export default class TransitBrowse {
   refreshStopDetails() {
     this.renderStopDetailsTable();
     
-    if (this.selectedStop) {
-      let didCallBack = false;
-      
-      this.client.getArrivalsSummary(this.selectedStop.id).then(arrivalsSummaries => {
-        didCallBack = true;
-        this.selectedStopArrivalsSummary = arrivalsSummaries
-        this.renderStopDetailsTable();
-      });
-      
-      setTimeout(() => {
-        if (!didCallBack) {
-          this.selectedStopArrivalsSummary = [];
-          this.renderStopDetailsTable();
-        }
-      }, 1000);
+    if (!this.selectedStop) {
+      return;
     }
+    
+    var didCallBack = false;
+    
+    let tasks = [
+      this.client.getStaticData(),
+      this.client.getArrivalsSummary(this.selectedStop.id)
+    ];
+    
+    Promise.all<any>(tasks).then(results => {
+      let staticData: StaticData = results[0];
+      let summaries: Array<RouteArrivalsSummary> = results[1];
+      
+      didCallBack = true;
+      this.selectedStopArrivalsViewModel = summaries.map(summary => {
+        return toRouteArrivalsViewModel(summary, staticData.routes[summary.routeName])
+      });
+        
+      this.renderStopDetailsTable();
+    });
+    
+    setTimeout(() => {
+      if (!didCallBack) {
+        this.selectedStopArrivalsViewModel = [];
+        this.renderStopDetailsTable();
+      }
+    }, 1000);
   }
   
   renderStopDetailsTable() {
     ReactDOM.render(<StopDetailsTable selectedStop={this.selectedStop}
-                        selectedStopArrivalsSummary={this.selectedStopArrivalsSummary}
+                        selectedStopArrivalsViewModel={this.selectedStopArrivalsViewModel}
                         selectedRouteName={this.selectedRouteName}
                         setSelectedRoute={routeName => this.setSelectedRoute(routeName)} />,
                     this.stopDetailsDiv);
@@ -67,4 +80,14 @@ export default class TransitBrowse {
       this.transitMap.setSelectedRoute(staticData.routes[routeName]);
     });
   }
+}
+
+function toRouteArrivalsViewModel(summary: RouteArrivalsSummary, route: BusRoute): RouteArrivalsViewModel {
+  return {
+    routeName: summary.routeName,
+    routeColor: route.color,
+    routeURL: route.url,
+    arrivalsSummary: summary.arrivalsSummary,
+    scheduleSummary: summary.scheduleSummary
+  };
 }
