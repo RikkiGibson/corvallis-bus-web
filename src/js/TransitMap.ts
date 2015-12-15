@@ -109,6 +109,11 @@ export default class TransitMap {
     if (this.selectedRoute && this.selectedRoute.googlePolyline) {
       this.selectedRoute.googlePolyline.setMap(null);
     }
+    // If no route was provided, just deselect the previous route.
+    if (!route) {
+      this.selectedRoute = null;
+      return;
+    }
     route.googlePolyline = route.googlePolyline || new google.maps.Polyline({
       path: google.maps.geometry.encoding.decodePath(route.polyline),
       strokeColor: "#" + route.color,

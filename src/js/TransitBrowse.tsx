@@ -58,6 +58,7 @@ export default class TransitBrowse {
     setTimeout(() => {
       if (!didCallBack) {
         this.selectedStopArrivalsViewModel = [];
+        this.setSelectedRoute(null);
         this.renderStopDetailsTable();
       }
     }, 1000);
