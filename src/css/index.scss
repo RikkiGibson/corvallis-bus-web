@@ -60,7 +60,7 @@ body {
   justify-content: center;
   align-content: stretch;
 
-  @media only screen and (max-width: $phone) {
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
     flex-direction: column;
     align-items: center;
   }
@@ -78,7 +78,7 @@ body {
   margin: 8px;
   height: 80vh;
   flex: 3;
-  @media only screen and (max-width: $phone) {
+  @media only screen and (max-width: $phone) and (orientation: portrait) {
     height: 53vh;
     width: 98%;
   }

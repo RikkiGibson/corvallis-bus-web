@@ -43,6 +43,12 @@ export default class TransitBrowse {
       this.selectedStopArrivalsViewModel = summaries.map(summary => {
         return toRouteArrivalsViewModel(summary, staticData.routes[summary.routeName])
       });
+    
+      // If the new arrivals information doesn't include the currently selected stop,
+      // select the route which will arrive the soonest in the new data.
+      if (this.selectedStop.routeNames.indexOf(this.selectedRouteName) === -1) {
+        this.setSelectedRoute(this.selectedStopArrivalsViewModel[0].routeName);
+      }
         
       this.renderStopDetailsTable();
     });
@@ -71,10 +77,6 @@ export default class TransitBrowse {
     
     this.selectedStop = stop;
     this.refreshStopDetails();
-    
-    if (stop.routeNames.indexOf(this.selectedRouteName) === -1) {
-      this.setSelectedRoute(stop.routeNames[0]);
-    }
   }
   
   /** Called by the stop details table in order to draw the polyline on the map. */

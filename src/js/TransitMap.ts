@@ -73,12 +73,12 @@ export default class TransitMap {
     var oldStop = this.stopMarkers[this.selectedStopID]; 
     if (oldStop) {
       oldStop.setIcon(BUS_STOP_ICON);
-      oldStop.setZIndex(1);
+      oldStop.setZIndex(google.maps.Marker.MAX_ZINDEX);
     }
     this.selectedStopID = stop.id;
     this.setSelectedStop(stop);
     marker.setIcon(BUS_STOP_SELECTED_ICON);
-    marker.setZIndex(2);
+    marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
   }
   
   onClickUserLocation() {
