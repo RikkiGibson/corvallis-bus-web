@@ -23,6 +23,7 @@ export default class TransitBrowse {
   refreshStopDetails() {
     this.renderStopDetailsTable();
     
+    // Only make an API call for arrival info if a stop is selected.
     if (!this.selectedStop) {
       return;
     }
@@ -46,6 +47,8 @@ export default class TransitBrowse {
       this.renderStopDetailsTable();
     });
     
+    // If the callback is fast, just go straight from showing old data to new data.
+    // If the callback is slow, clear out the table while waiting for new data. 
     setTimeout(() => {
       if (!didCallBack) {
         this.selectedStopArrivalsViewModel = [];
@@ -78,12 +81,13 @@ export default class TransitBrowse {
   setSelectedRoute(routeName: string) {
     this.selectedRouteName = routeName;
     this.renderStopDetailsTable();
-    
+
     this.client.getStaticData().then(staticData => {
       this.transitMap.setSelectedRoute(staticData.routes[routeName]);
     });
   }
 }
+
 
 function toRouteArrivalsViewModel(summary: RouteArrivalsSummary, route: BusRoute): RouteArrivalsViewModel {
   return {

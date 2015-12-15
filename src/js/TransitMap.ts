@@ -7,6 +7,7 @@ import './Models.ts';
 // This is how to include images using webpack.
 declare var require: (string) => any;
 
+// TODO: fix bounding boxes so it's easier to tap on the correct marker
 const USER_LOCATION_ICON: google.maps.Icon = {
   url: require("../img/user-location.png"),
   size: new google.maps.Size(66, 66),
@@ -29,14 +30,6 @@ const BUS_STOP_SELECTED_ICON: google.maps.Icon = {
   scaledSize: new google.maps.Size(45, 55),
   origin: new google.maps.Point(0, 0),
   anchor: new google.maps.Point(22.5, 55),
-};
-
-const BUS_STOP_DEEMPHASIZED_ICON: google.maps.Icon = {
-  url: require("../img/greenoval-deemphasized.png"),
-  size: new google.maps.Size(96, 117),
-  scaledSize: new google.maps.Size(37, 45),
-  origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(18.5, 45)
 };
 
 export default class TransitMap {
@@ -80,12 +73,12 @@ export default class TransitMap {
     var oldStop = this.stopMarkers[this.selectedStopID]; 
     if (oldStop) {
       oldStop.setIcon(BUS_STOP_ICON);
-      oldStop.setZIndex(2);
+      oldStop.setZIndex(1);
     }
     this.selectedStopID = stop.id;
     this.setSelectedStop(stop);
     marker.setIcon(BUS_STOP_SELECTED_ICON);
-    marker.setZIndex(3);
+    marker.setZIndex(2);
   }
   
   onClickUserLocation() {
@@ -124,38 +117,6 @@ export default class TransitMap {
     });
     route.googlePolyline.setMap(this.map);
     
-    for (var stopID in this.stopMarkers) {
-      if (this.selectedStopID == stopID) {
-        this.stopMarkers[stopID].setIcon(BUS_STOP_SELECTED_ICON);
-        this.stopMarkers[stopID].setZIndex(3);
-      } else if (stopID in routePathSet(route)) {
-        this.stopMarkers[stopID].setIcon(BUS_STOP_ICON);
-        this.stopMarkers[stopID].setZIndex(2);
-      } else {
-        this.stopMarkers[stopID].setIcon(BUS_STOP_DEEMPHASIZED_ICON);
-        this.stopMarkers[stopID].setZIndex(1);
-      }
-      
-    }
-    
     this.selectedRoute = route;
   }
 }
-
-var routePathSet = function() {
-  var sets = {};
-  return function(route: BusRoute) {
-    var currentSet = sets[route.routeNo]; 
-    if (currentSet) {
-      return currentSet;
-    }
-    
-    currentSet = {};
-    for (var stopID of route.path) {
-      currentSet[stopID] = true;
-    }
-    sets[route.routeNo] = currentSet;
-    
-    return currentSet;
-  }
-}();

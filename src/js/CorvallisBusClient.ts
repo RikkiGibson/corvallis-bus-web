@@ -43,8 +43,10 @@ function makeRequest(method: string, url: string):
 export function getUserLocation(resolve: PositionCallback, reject?: PositionErrorCallback): void {
   if (!navigator.geolocation) {
     var err = new PositionError();
+    err.code = PositionError.POSITION_UNAVAILABLE;
     err.message = "User location not available";
     reject(err);
+    return;
   }
   navigator.geolocation.getCurrentPosition(
     position => resolve(position),
