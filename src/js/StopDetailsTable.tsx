@@ -27,7 +27,7 @@ export default class StopDetailsTable extends React.Component<Props, State> {
   render() {
     var stopName = this.props.selectedStop
       ? this.props.selectedStop.name
-      : "Select a bus stop to begin";
+      : "Select a bus stop to get started";
     
     return (
       <table className="stop-details">
