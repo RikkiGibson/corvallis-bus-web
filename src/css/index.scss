@@ -22,17 +22,14 @@ body {
 
 
 .nav {
-  margin: 0px 2px;
+  margin-left: 2px;
+  margin-right: 4px;
+  margin-bottom: 4px;
   
   a:link, a:visited {
     text-decoration: none;
     color: white;
   }
-}
-
-.end {
-  text-align: right;
-  flex: 1;
 }
 
 .nav .active {
@@ -63,7 +60,7 @@ body {
   justify-content: center;
   align-content: stretch;
 
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
+  @media only screen and (max-width: $phone) {
     flex-direction: column;
     align-items: center;
   }
@@ -81,7 +78,7 @@ body {
   margin: 8px;
   height: 80vh;
   flex: 3;
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
+  @media only screen and (max-width: $phone) {
     height: 53vh;
     width: 98%;
   }

@@ -49,25 +49,25 @@ export default class StopDetailsTable extends React.Component<Props, State> {
                     className={isSelected ? "clickable-row selected" : "clickable-row"}
                     onClick={() => this.onClickTableRow(index)}>
                   <td>
-                    <div className="route-name block">
-                      <span className="" style={firstRouteStyle}>
-                        {routeSummary.routeName}
-                      </span>
-                    </div>
-                    <div className="block">
-                      <div>
-                        {routeSummary.arrivalsSummary}
-                      </div>
-                      <div>
-                        <span className="schedule-summary">
-                          {routeSummary.scheduleSummary}
+                    <div className="route-details">
+                      <div className="route-name flex-item">
+                        <span style={firstRouteStyle}>
+                          {routeSummary.routeName}
                         </span>
                       </div>
-                    </div>
-                    <div className="block end">
-                      <a href={routeSummary.routeURL} target="_blank">
-                        <img className="more-info" src={require("../img/idea.png")} />
-                      </a>
+                      <div>
+                        <div>
+                          {routeSummary.arrivalsSummary}
+                        </div>
+                        <div className="schedule-summary">
+                          {routeSummary.scheduleSummary}
+                        </div>
+                      </div>
+                      <div className="flex-item end">
+                        <a href={routeSummary.routeURL} target="_blank">
+                          <img className="more-info" src={require("../img/idea.png")} />
+                        </a>
+                      </div>
                     </div>
                   </td>
                 </tr>

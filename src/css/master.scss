@@ -17,17 +17,20 @@ td, th {
 .route-name {
 	margin-right: 4px;
   span {
-	color: white;
-	padding: 1px;
-	width: 50px;
-  height: 25px;
-  vertical-align: middle;
-	text-align: center;
-	display: table-cell;
-	border-radius: 10px;
+    color: white;
+    padding: 1px;
+    width: 50px;
+    height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    border-radius: 10px;
   }
 }
 
+/**
+ * Hover and click on table row
+ */
 @mixin clickable() {
 	cursor: pointer;
 	cursor: hand;
@@ -52,6 +55,9 @@ td, th {
   background-color: gainsboro;
 }
 
+/**
+ * User location button 
+ */
 .location-arrow {
 	width: 15px;
 	height: 15px;
@@ -73,11 +79,6 @@ td, th {
   border-radius: 10px;
 }
 
-tr {
-  word-wrap: break-word;
-}
-
-// TODO: convert to flexbox as usual :(
 .stop-details {
   table-layout: fixed;
   width: 100%;
@@ -91,13 +92,24 @@ tr {
   }
 }
 
-div .block {
-  display: inline-block;
-  vertical-align: middle;
+/**
+ * Table row 
+ */
+tr {
+  word-wrap: break-word;
 }
 
-div .end {
-  float: right;
+.route-details {
+  display: flex;
+  align-items: center;
+}
+
+/**
+ * "More info" button 
+ */
+.end {
+  text-align: right;
+  flex: 1;
 }
 
 .more-info {
@@ -111,24 +123,27 @@ div .end {
   opacity: 1;
 }
 
+/**
+ * Schedule summary label
+ */
 .schedule-summary {
   font-size: 0.8em;
   color: gray;
 }
 
-// TODO: this file desperately needs to be split up
 .table-container {
   
-  flex: 1;
-  min-width: 33%;
+  flex: 2;
+  min-width: 295px;
   width: 33%;
   height: 80vh;
   overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* provides inertial scrolling */
+
   display: inline-block;
   margin: 8px;
   
-  @media only screen and (max-width: $phone) and (orientation: portrait) {
+  @media only screen and (max-width: $phone) {
     margin: 0px;
     order: 1;
     align-content: center;
