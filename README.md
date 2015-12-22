@@ -12,7 +12,6 @@ The following dependencies need to be installed globally using npm to build the 
 4. PostCSS
 5. PostCSS Autoprefixer
 6. cssnano
-7. webpack
 
 Then to build the app, go to the root project folder and run:
 ```npm run build``` or ```npm run devbuild```.
