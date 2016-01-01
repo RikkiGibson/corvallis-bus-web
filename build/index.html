@@ -41,7 +41,7 @@
             </tr>
           </thead>
           <tbody data-bind="foreach: selectedStopArrivals">
-            <tr class="clickable-row" data-bind="css: { selected: $root.selectedRouteName() == routeName }, click: function() { $root.setSelectedRoute(routeName) }">
+            <tr class="clickable-row" data-bind="css: { selected: $root.selectedRouteName() == routeName }, click: function() { $root.setSelectedRoute(routeName); return true; }">
               <td>
                 <div class="route-details">
                   <div class="route-name flex-item">
@@ -53,11 +53,10 @@
                   </div>
                   <div class="flex-item end">
                     <a data-bind="attr: { href: routeURL }" target="_blank">
-                      <img class="more-info" data-bind="attr: { src: 'img/idea.png' }" />
+                      <img class="more-info" src="img/idea.png" />
                     </a>
                   </div>
                 </div>
-                
               </td>
             </tr>
           </tbody>
