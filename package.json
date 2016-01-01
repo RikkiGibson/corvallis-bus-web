@@ -38,6 +38,7 @@
     "es5-shim": "^4.4.0",
     "es6-promise": "^3.0.2",
     "history": "^1.13.0",
+    "knockout": "^3.4.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-google-maps": "^4.2.0",

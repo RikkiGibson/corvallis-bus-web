@@ -41,7 +41,8 @@ export default class TransitMap {
   
   constructor(mapDiv: HTMLElement, userLocationButton: HTMLElement,
               private staticDataPromise: Promise<StaticData>,
-              private setSelectedStop: (BusStop) => void) {
+              private setSelectedStop: (BusStop) => void,
+              initialStopID?: string) {
     this.map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(44.56802, -123.27926),
       zoom: 15
@@ -52,6 +53,10 @@ export default class TransitMap {
     staticDataPromise.then(staticData => {
       for (var key in staticData.stops) {
         this.stopMarkers[key] = this.makeMapMarker(staticData.stops[key]);
+      }
+      if (initialStopID) {
+        this.map.setCenter(staticData.stops[initialStopID]);
+        google.maps.event.trigger(this.stopMarkers[initialStopID], 'click');
       }
     });
   }

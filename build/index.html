@@ -33,7 +33,36 @@
       </div>
     </div>
     <div id="browse" class="browse">
-      <div id="stop-details" class="table-container"></div>
+      <div id="stop-details" class="table-container">
+        <table class="stop-details">
+          <thead>
+            <tr>
+              <th class="stop-details-header" data-bind="text: selectedStop().name"></th>
+            </tr>
+          </thead>
+          <tbody data-bind="foreach: selectedStopArrivals">
+            <tr class="clickable-row" data-bind="css: { selected: $root.selectedRouteName() == routeName }, click: function() { $root.setSelectedRoute(routeName) }">
+              <td>
+                <div class="route-details">
+                  <div class="route-name flex-item">
+                    <span data-bind="style: { backgroundColor: '#' + routeColor }, text: routeName"></span>
+                  </div>
+                  <div>
+                    <div data-bind="text: arrivalsSummary"></div>
+                    <div class="schedule-summary" data-bind="text: scheduleSummary"></div>
+                  </div>
+                  <div class="flex-item end">
+                    <a data-bind="attr: { href: routeURL }" target="_blank">
+                      <img class="more-info" data-bind="attr: { src: 'img/idea.png' }" />
+                    </a>
+                  </div>
+                </div>
+                
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="map-container">
         <div id="map" class="map"></div>
         <a id="user-location-button" class="location-button clickable"></a>
