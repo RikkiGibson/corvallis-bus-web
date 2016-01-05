@@ -8,7 +8,7 @@
     "sass_dev": "sass src/css/index.scss | postcss --use autoprefixer > build/css/index.css",
     "sass": "sass src/css/index.scss | postcss --use autoprefixer | cssnano > build/css/index.css",
     "devbuild": "npm run sass_dev && webpack",
-    "build": "npm run sass && webpack -p"
+    "build": "npm run sass && NODE_ENV=production webpack -p"
   },
   "author": "rikkigibson",
   "devDependencies": {

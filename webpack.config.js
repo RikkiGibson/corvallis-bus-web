@@ -5,7 +5,9 @@ module.exports = {
     output: {
         filename: 'build/js/bundle.js'
     },
-    devtool: 'eval',
+    devtool: process.env.NODE_ENV === 'production'
+      ? 'eval'
+      : 'source-map',
     module: {
         preLoaders: [
             {
