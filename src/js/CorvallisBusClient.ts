@@ -1,4 +1,7 @@
-const ROOT_URL = "https://corvallisb.us/api"
+// If running on the server, expect the API is running there too.
+const ROOT_URL = window.location.host
+  ? "/api"
+  : "https://corvallisb.us/api";
 
 export default class CorvallisBusClient {
   private staticDataPromise: Promise<StaticData>;
