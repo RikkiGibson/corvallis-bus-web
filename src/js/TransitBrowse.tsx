@@ -13,17 +13,38 @@ interface StopDetailsViewModel {
   setSelectedRoute: (string) => void;
 }
 
+/**
+ * Wraps exception handling around local storage access.
+ * Safari explodes when trying to use local storage with private browsing.
+ */
+function localStorageStopID(id?: number): string {
+  try {
+    if (id !== null && id !== undefined) {
+      window.localStorage['selectedStopID'] = id;
+      // Local storage can only return strings, and the ID indexing
+      // uses a string anyway, so just turn the number provided into a string.
+      return id.toString();
+    } else {
+      return window.localStorage['selectedStopID'];
+    }
+  }
+  catch (e) {
+    // Mimicks local storage behavior of returning empty string for unknown key.
+    return "";
+  }
+}
+
 export default class TransitBrowse {
   private transitMap: TransitMap;
   private stopDetailsViewModel: StopDetailsViewModel;
   
   constructor(private client: CorvallisBusClient, private stopDetailsDiv: HTMLElement,
               mapDiv: HTMLElement, userLocationButton: HTMLElement) {
-             
+
     const initialStopID = window.location.hash
       ? window.location.hash.substr(1) 
-      : window.localStorage['selectedStopID'];
-         
+      : localStorageStopID();
+    
     const placeholderStop: BusStop = {
       name: initialStopID ? "" : "Select a bus stop to get started",
       lat: 0, lng: 0, routeNames: [], id: 0
@@ -81,7 +102,7 @@ export default class TransitBrowse {
   }
 
   setSelectedStop(stop: BusStop) {
-    window.localStorage['selectedStopID'] = stop.id;
+    localStorageStopID(stop.id);
     window.history.replaceState(null, '', '#' + stop.id);
     
     // Scroll so the whole table is visible on mobile devices
