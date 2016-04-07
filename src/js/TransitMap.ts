@@ -16,20 +16,28 @@ const USER_LOCATION_ICON: google.maps.Icon = {
   anchor: new google.maps.Point(11, 11)
 };
 
+const BUS_STOP_ICON_WIDTH = 45;
+const BUS_STOP_ICON_HEIGHT = 90;
+const BUS_STOP_ICON_SCALE = 1/2.6;
+const BUS_STOP_ICON_SELECTED_SCALE = 1/2.3;
 const BUS_STOP_ICON: google.maps.Icon = {
   url: require("../img/greenoval.png"),
-  size: new google.maps.Size(96, 117),
-  scaledSize: new google.maps.Size(37, 45),
+  size: new google.maps.Size(BUS_STOP_ICON_WIDTH, BUS_STOP_ICON_HEIGHT),
+  scaledSize: new google.maps.Size(BUS_STOP_ICON_WIDTH * BUS_STOP_ICON_SCALE,
+                                   BUS_STOP_ICON_HEIGHT * BUS_STOP_ICON_SCALE),
   origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(18.5, 45)
+  anchor: new google.maps.Point(BUS_STOP_ICON_WIDTH * BUS_STOP_ICON_SCALE / 2,
+                                BUS_STOP_ICON_HEIGHT * BUS_STOP_ICON_SCALE)
 };
 
 const BUS_STOP_SELECTED_ICON: google.maps.Icon = {
   url: require("../img/greenoval-highlighted.png"),
-  size: new google.maps.Size(96, 117),
-  scaledSize: new google.maps.Size(45, 55),
+  size: new google.maps.Size(BUS_STOP_ICON_WIDTH, BUS_STOP_ICON_HEIGHT),
+  scaledSize: new google.maps.Size(BUS_STOP_ICON_WIDTH * BUS_STOP_ICON_SELECTED_SCALE,
+                                   BUS_STOP_ICON_HEIGHT * BUS_STOP_ICON_SELECTED_SCALE),
   origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(22.5, 55),
+  anchor: new google.maps.Point(BUS_STOP_ICON_WIDTH * BUS_STOP_ICON_SELECTED_SCALE / 2,
+                                BUS_STOP_ICON_HEIGHT * BUS_STOP_ICON_SELECTED_SCALE)
 };
 
 export default class TransitMap {
