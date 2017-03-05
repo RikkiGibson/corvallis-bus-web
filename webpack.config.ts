@@ -1,13 +1,15 @@
-var path = require('path');
 
-module.exports = {
-    entry: './src/js/entry.tsx',
+import * as path from 'path';
+import * as webpack from 'webpack';
+
+const config: webpack.Configuration = {
+    entry: 'src/js/index.ts',
     output: {
         filename: 'build/js/bundle.js'
     },
     devtool: process.env.NODE_ENV === 'production'
-      ? 'eval'
-      : 'source-map',
+        ? 'eval'
+        : 'source-map',
     module: {
         preLoaders: [
             {
@@ -43,18 +45,20 @@ module.exports = {
                 ]
             },
             {
-              test: /\.tsx?$/,
-              exclude: /(node_modules|bower_components)/,
-              loaders: [
-                'react-hot',
-                'babel?stage=0',
-                'ts-loader'
-              ]
+                test: /\.tsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                loaders: [
+                    'react-hot',
+                    'babel?stage=0',
+                    'ts-loader'
+                ]
             }
         ]
     },
     resolve: {
-      root: path.resolve('.'), 
-      extensions: ["", ".js", ".jsx", ".ts", ".tsx"]
+        root: path.resolve('.'),
+        extensions: ["", ".js", ".jsx", ".ts", ".tsx"]
     }
 };
+
+module.exports = config;

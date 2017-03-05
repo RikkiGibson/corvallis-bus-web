@@ -1,0 +1,14 @@
+{
+    "exclude": [
+        "node_modules",
+        "bower_components"
+    ],
+    "compilerOptions": {
+        "target": "es6",
+        "module": "amd",
+        "removeComments": true,
+        "jsx": "react",
+        "strictNullChecks": true
+    },
+    "compileOnSave": true
+}
