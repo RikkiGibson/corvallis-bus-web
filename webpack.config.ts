@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 
 const config: webpack.Configuration = {
-    entry: 'src/js/index.ts',
+    entry: 'src/ts/index.ts',
     output: {
         filename: 'build/js/bundle.js'
     },
