@@ -3,9 +3,14 @@
 import { getUserLocation } from "./CorvallisBusClient";
 import './Models.ts';
 
-// Tell TypeScript that the require function exists so it stops complaining.
-// This is how to include images using webpack.
-declare var require: (res: string) => any;
+declare global {
+    namespace google.maps {
+        interface Polyline {
+            /** Removes the polyline from the map. */
+            setMap(map: null): void;
+        }
+    }
+}
 
 // TODO: fix bounding boxes so it's easier to tap on the correct marker
 const USER_LOCATION_ICON: google.maps.Icon = {
@@ -120,7 +125,7 @@ export default class TransitMap {
             return;
         }
         if (this.selectedRoute && this.selectedRoute.googlePolyline) {
-            this.selectedRoute.googlePolyline.setMap(null!);
+            this.selectedRoute.googlePolyline.setMap(null);
         }
         // If no route was provided, just deselect the previous route.
         if (!route) {

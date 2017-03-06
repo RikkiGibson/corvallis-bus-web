@@ -4,19 +4,20 @@ const ROOT_URL = window.location.host
     : "https://corvallisb.us/api";
 
 export default class CorvallisBusClient {
-    private staticDataPromise: Promise<StaticData>;
+    private staticDataPromise: Promise<StaticData> | null = null;
 
     getStaticData(): Promise<StaticData> {
         if (!this.staticDataPromise) {
             this.staticDataPromise =
                 new Promise(makeRequest("GET", ROOT_URL + "/static"))
-                    .then((staticDataJSON: string) => JSON.parse(staticDataJSON));
+                    .then((staticDataJSON: string) => JSON.parse(staticDataJSON))
+                    .catch(() => this.staticDataPromise = null);
         }
         return this.staticDataPromise;
     }
 
-    getArrivalsSummary(stopID): Promise<RouteArrivalsSummary[]> {
-        var url = ROOT_URL + "/arrivals-summary/" + stopID.toString();
+    getArrivalsSummary(stopID: number): Promise<RouteArrivalsSummary[]> {
+        var url = ROOT_URL + "/arrivals-summary/" + stopID;
         return new Promise(makeRequest("GET", url))
             .then((scheduleJSON: string) => JSON.parse(scheduleJSON)[stopID])
     }

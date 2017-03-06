@@ -7,7 +7,7 @@ interface BusStop {
     lng: number;
 
     /** The names of routes that stop at this BusStop. */
-    routeNames: Array<string>;
+    routeNames: string[];
 }
 
 interface BusRoute {
@@ -16,7 +16,7 @@ interface BusRoute {
     routeNo: string;
 
     /** A list of the sequence of stop IDs visited by this BusRoute. */
-    path: Array<number>;
+    path: number[];
 
     color: string;
     url: string;
