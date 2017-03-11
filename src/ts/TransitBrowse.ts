@@ -46,7 +46,7 @@ export default class TransitBrowse {
 
         const placeholderStop: BusStop = {
             name: initialStopID ? "" : "Select a bus stop to get started",
-            lat: 0, lng: 0, routeNames: [], id: 0
+            lat: 0, lng: 0, routeNames: [], id: 0, bearing: 0
         }
 
         this.stopDetailsViewModel = {

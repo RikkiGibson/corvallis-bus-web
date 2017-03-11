@@ -8,6 +8,9 @@ interface BusStop {
 
     /** The names of routes that stop at this BusStop. */
     routeNames: string[];
+
+    /** An angle in degrees indicating the travel direction of buses arriving at this stop. */
+    bearing: number;
 }
 
 interface BusRoute {
