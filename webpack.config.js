@@ -1,8 +1,8 @@
 
-import * as path from 'path';
-import * as webpack from 'webpack';
+const path = require('path');
+const webpack = require('webpack');
 
-const config: webpack.Configuration = {
+const config = {
     entry: 'src/ts/index.ts',
     output: {
         filename: 'build/js/bundle.js'
@@ -11,13 +11,6 @@ const config: webpack.Configuration = {
         ? 'eval'
         : 'source-map',
     module: {
-        preLoaders: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'source-map'
-            }
-        ],
         loaders: [
             {
                 test: /\.scss$/,
@@ -37,19 +30,9 @@ const config: webpack.Configuration = {
                 ]
             },
             {
-                test: /\.jsx?$/,
+                test: /\.ts$/,
                 exclude: /(node_modules|bower_components)/,
                 loaders: [
-                    'react-hot',
-                    'babel?stage=0'
-                ]
-            },
-            {
-                test: /\.tsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loaders: [
-                    'react-hot',
-                    'babel?stage=0',
                     'ts-loader'
                 ]
             }

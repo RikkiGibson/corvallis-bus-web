@@ -90,7 +90,7 @@ export default class TransitBrowse {
             if (viewModel.selectedStop().routeNames.indexOf(viewModel.selectedRouteName()) === -1) {
                 this.setSelectedRoute(viewModel.selectedStopArrivals()[0].routeName);
             }
-        }).catch(err => {
+        }).catch(ignored => {
             didCallBack = true;
             viewModel.selectedStopArrivals([]);
             viewModel.errorMessage("An error occurred. Please try again later.");

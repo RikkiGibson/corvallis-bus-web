@@ -2,3 +2,4 @@ build/js/
 build/css/
 node_modules/
 .sass-cache/
+.vscode/.browse.VC.db
